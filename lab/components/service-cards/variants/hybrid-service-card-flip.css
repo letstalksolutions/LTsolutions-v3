@@ -1,0 +1,446 @@
+/* ============================================
+   Hybrid Service Card with Flip Animation
+   LT.Solutions Design System v2
+   ============================================
+
+   A compact card that flips to reveal detailed
+   benefits. Front stays clean (icon, title, short
+   description). Back shows full details (benefits,
+   longer description, CTA).
+
+   Requires: styles-unified.css (design tokens)
+   ============================================ */
+
+/* ============================================
+   1. FLIP CONTAINER & 3D PERSPECTIVE
+   ============================================ */
+
+.service-card-flip {
+  perspective: 1000px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.service-card-flip__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  transition: transform var(--transition-slower);
+  transform-style: preserve-3d;
+}
+
+/* Trigger flip on hover OR when .flipped class is added */
+.service-card-flip:hover .service-card-flip__inner,
+.service-card-flip.flipped .service-card-flip__inner {
+  transform: rotateY(180deg);
+}
+
+/* ============================================
+   2. SHARED CARD FACE STYLES
+   ============================================ */
+
+.service-card-flip__front,
+.service-card-flip__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   3. FRONT FACE (Minimal)
+   ============================================ */
+
+.service-card-flip__front {
+  background: var(--glass-bg-light);
+  border: 2px solid var(--glass-border-light);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient line - top */
+.service-card-flip__front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-red), var(--color-atlassian-blue));
+  transition: width var(--transition-slower);
+  z-index: 1;
+}
+
+.service-card-flip:hover .service-card-flip__front::before {
+  width: 100%;
+}
+
+/* Header: Icon + Category Badge */
+.service-card-flip__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.service-card-flip__icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.12), rgba(0, 82, 204, 0.08));
+  border: 1px solid rgba(196, 30, 58, 0.2);
+  border-radius: var(--radius-lg);
+  color: var(--color-red);
+  transition: all var(--transition-base);
+}
+
+.service-card-flip__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.service-card-flip__category {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  background: rgba(196, 30, 58, 0.12);
+  border: 1px solid rgba(196, 30, 58, 0.25);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-red);
+}
+
+.service-card-flip__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-white);
+  margin-bottom: var(--space-3);
+}
+
+.service-card-flip__description {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.service-card-flip__hint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-card-flip__hint svg {
+  width: 16px;
+  height: 16px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   4. BACK FACE (Detailed)
+   ============================================ */
+
+.service-card-flip__back {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  border: 2px solid rgba(196, 30, 58, 0.3);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+  box-shadow: var(--shadow-lg);
+  transform: rotateY(180deg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient lines - both edges */
+.service-card-flip__back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-red), var(--color-atlassian-blue));
+  z-index: 1;
+}
+
+.service-card-flip__back::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-atlassian-blue), var(--color-red));
+  z-index: 1;
+}
+
+.service-card-flip__back-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.service-card-flip__benefits {
+  list-style: none;
+  margin: 0 0 var(--space-5) 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.service-card-flip__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.service-card-flip__benefit:last-child {
+  border-bottom: none;
+}
+
+.service-card-flip__benefit-icon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-trust-green);
+  margin-top: 2px;
+}
+
+.service-card-flip__benefit-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
+}
+
+.service-card-flip__benefit-text {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* CTA Button */
+.service-card-flip__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-5);
+  background: linear-gradient(135deg, var(--color-red), var(--color-atlassian-blue));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-top: auto;
+}
+
+.service-card-flip__cta-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-base);
+}
+
+.service-card-flip__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 30, 58, 0.4);
+  filter: brightness(1.1);
+}
+
+.service-card-flip__cta:hover .service-card-flip__cta-icon {
+  transform: translateX(4px);
+}
+
+.service-card-flip__cta:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   5. LIGHT SECTION VARIANT
+   ============================================ */
+
+.section--light .service-card-flip__front {
+  background: var(--color-white);
+  border-color: var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.section--light .service-card-flip__title,
+.section--light .service-card-flip__back-title {
+  color: var(--color-neutral-900);
+}
+
+.section--light .service-card-flip__description {
+  color: var(--color-neutral-700);
+}
+
+.section--light .service-card-flip__hint {
+  color: var(--color-neutral-500);
+  border-color: var(--color-neutral-200);
+}
+
+.section--light .service-card-flip__back {
+  background: var(--color-white);
+  border-color: var(--color-red);
+  box-shadow: var(--shadow-lg);
+}
+
+.section--light .service-card-flip__benefit {
+  border-color: var(--color-neutral-100);
+}
+
+.section--light .service-card-flip__benefit-text {
+  color: var(--color-neutral-800);
+}
+
+/* ============================================
+   6. RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 767px) {
+  .service-card-flip__inner {
+    min-height: 380px;
+  }
+
+  .service-card-flip__front,
+  .service-card-flip__back {
+    padding: var(--space-5);
+  }
+
+  .service-card-flip__title {
+    font-size: var(--text-xl);
+  }
+
+  .service-card-flip__icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .service-card-flip__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service-card-flip__description {
+    font-size: var(--text-sm);
+  }
+
+  .service-card-flip__benefit-text {
+    font-size: var(--text-xs);
+  }
+
+  .service-card-flip__cta {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+  }
+}
+
+/* ============================================
+   7. REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card-flip__inner {
+    transition: none;
+  }
+
+  .service-card-flip:hover .service-card-flip__inner,
+  .service-card-flip.flipped .service-card-flip__inner {
+    transform: none;
+  }
+
+  /* Show both sides stacked instead */
+  .service-card-flip__front,
+  .service-card-flip__back {
+    position: relative;
+    transform: none !important;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+  }
+
+  .service-card-flip__back {
+    margin-top: var(--space-4);
+  }
+
+  .service-card-flip__hint svg {
+    animation: none;
+  }
+}
+
+/* ============================================
+   8. PRINT STYLES
+   ============================================ */
+
+@media print {
+  .service-card-flip__front,
+  .service-card-flip__back {
+    position: relative;
+    transform: none !important;
+    backface-visibility: visible;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  .service-card-flip__back {
+    margin-top: var(--space-4);
+  }
+
+  .service-card-flip__title,
+  .service-card-flip__back-title,
+  .service-card-flip__benefit-text {
+    color: black;
+  }
+
+  .service-card-flip__hint {
+    display: none;
+  }
+}
