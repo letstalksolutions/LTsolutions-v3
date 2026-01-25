@@ -2,7 +2,7 @@
 
 ## Where to work
 - Only edit files in site/
-- Do not edit lab/ unless asked to pull something across
+- Do not edit lab/ or archive/
 
 ## Current objective
 Implement v1 homepage using site/index.html and site/css/styles.css with:

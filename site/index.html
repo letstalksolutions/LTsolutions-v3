@@ -97,11 +97,11 @@
 
         <ul class="nav__menu">
           <li><a href="/" class="nav__link nav__link--active" aria-current="page">Home</a></li>
-          <li><a href="/services" class="nav__link">Services</a></li>
-          <li><a href="/approach" class="nav__link">Our Approach</a></li>
-          <li><a href="/insights" class="nav__link">Insights</a></li>
-          <li><a href="/about" class="nav__link">About</a></li>
-          <li><a href="/contact" class="nav__link">Contact</a></li>
+          <li><a href="/services/" class="nav__link">Services</a></li>
+          <li><a href="/approach/" class="nav__link">Our Approach</a></li>
+          <li><a href="/insights/" class="nav__link">Insights</a></li>
+          <li><a href="/about/" class="nav__link">About</a></li>
+          <li><a href="/contact/" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -121,8 +121,8 @@
           clear escalation paths, and knowledge practices your team can run.
         </p>
         <div class="hero__cta">
-          <a href="/contact" class="btn btn--primary btn--lg">Book a short call</a>
-          <a href="/approach" class="btn btn--secondary btn--lg">View our approach</a>
+          <a href="/contact/" class="btn btn--primary btn--lg">Book a short call</a>
+          <a href="/approach/" class="btn btn--secondary btn--lg">View our approach</a>
         </div>
         <ul class="hero__trust" aria-label="Trust signals">
           <li>4k–5k seat global rollouts</li>
@@ -217,77 +217,102 @@
       </div>
 
       <div class="grid grid--2">
-        <article class="service-card reveal">
-          <div class="service-card__number">
-            <span class="service-card__index">01</span>
-            <span class="service-card__category">JSM Delivery</span>
+        <article class="service-card-v2 reveal">
+          <div class="service-card-v2__header">
+            <div class="service-card-v2__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3h18v6H3z"/>
+                <path d="M7 13h10"/>
+                <path d="M7 17h6"/>
+              </svg>
+            </div>
+            <span class="service-card-v2__badge">JSM Delivery</span>
           </div>
-          <h3 class="service-card__title">Jira Service Management implementation & optimisation</h3>
-          <p class="service-card__description">For ITSM leads and service owners needing reliable intake and SLA control.</p>
-          <ul class="service-card__list">
-            <li>Service portal and request design</li>
-            <li>Queues, SLAs, and escalation logic</li>
-            <li>Reporting aligned to operating model</li>
+          <h3 class="service-card-v2__title">Jira Service Management implementation & optimisation</h3>
+          <p class="service-card-v2__description">For ITSM leads and service owners needing reliable intake and SLA control.</p>
+          <ul class="service-card-v2__benefits">
+            <li class="service-card-v2__benefit">Service portal and request design</li>
+            <li class="service-card-v2__benefit">Queues, SLAs, and escalation logic</li>
+            <li class="service-card-v2__benefit">Reporting aligned to operating model</li>
           </ul>
-          <a href="/services#jira-service-management" class="service-card__link">
-            Learn more →
-          </a>
+          <a class="service-card-v2__cta" href="/services/#jira-service-management">Learn more</a>
         </article>
 
-        <article class="service-card reveal">
-          <div class="service-card__number">
-            <span class="service-card__index">02</span>
-            <span class="service-card__category">Assets (CMDB)</span>
+        <article class="service-card-v2 reveal">
+          <div class="service-card-v2__header">
+            <div class="service-card-v2__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7h16"/>
+                <path d="M4 12h16"/>
+                <path d="M4 17h16"/>
+              </svg>
+            </div>
+            <span class="service-card-v2__badge">Assets (CMDB)</span>
           </div>
-          <h3 class="service-card__title">Assets data model & service mapping</h3>
-          <p class="service-card__description">For platform owners who need practical, accurate asset-driven operations.</p>
-          <ul class="service-card__list">
-            <li>Asset schema and relationship design</li>
-            <li>Discovery and data quality automation</li>
-            <li>Service impact visibility</li>
+          <h3 class="service-card-v2__title">Assets data model & service mapping</h3>
+          <p class="service-card-v2__description">For platform owners who need practical, accurate asset-driven operations.</p>
+          <ul class="service-card-v2__benefits">
+            <li class="service-card-v2__benefit">Asset schema and relationship design</li>
+            <li class="service-card-v2__benefit">Discovery and data quality automation</li>
+            <li class="service-card-v2__benefit">Service impact visibility</li>
           </ul>
-          <a href="/services#assets-cmdb" class="service-card__link">
-            Learn more →
-          </a>
+          <a class="service-card-v2__cta" href="/services/#assets-cmdb">Learn more</a>
         </article>
 
-        <article class="service-card reveal">
-          <div class="service-card__number">
-            <span class="service-card__index">03</span>
-            <span class="service-card__category">Opsgenie</span>
+        <article class="service-card-v2 reveal">
+          <div class="service-card-v2__header">
+            <div class="service-card-v2__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v6"/>
+                <path d="M12 16v6"/>
+                <path d="M4.93 4.93l4.24 4.24"/>
+                <path d="M14.83 14.83l4.24 4.24"/>
+                <path d="M2 12h6"/>
+                <path d="M16 12h6"/>
+              </svg>
+            </div>
+            <span class="service-card-v2__badge">Opsgenie</span>
           </div>
-          <h3 class="service-card__title">Incident response & major incident design</h3>
-          <p class="service-card__description">For operations leaders improving on-call, comms, and recovery speed.</p>
-          <ul class="service-card__list">
-            <li>On-call schedules and escalation paths</li>
-            <li>Major incident workflows</li>
-            <li>Status and stakeholder comms</li>
+          <h3 class="service-card-v2__title">Incident response & major incident design</h3>
+          <p class="service-card-v2__description">For operations leaders improving on-call, comms, and recovery speed.</p>
+          <ul class="service-card-v2__benefits">
+            <li class="service-card-v2__benefit">On-call schedules and escalation paths</li>
+            <li class="service-card-v2__benefit">Major incident workflows</li>
+            <li class="service-card-v2__benefit">Status and stakeholder comms</li>
           </ul>
-          <a href="/services#opsgenie" class="service-card__link">
-            Learn more →
-          </a>
+          <a class="service-card-v2__cta" href="/services/#opsgenie">Learn more</a>
         </article>
 
-        <article class="service-card reveal">
-          <div class="service-card__number">
-            <span class="service-card__index">04</span>
-            <span class="service-card__category">Automation</span>
+        <article class="service-card-v2 reveal">
+          <div class="service-card-v2__header">
+            <div class="service-card-v2__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4"/>
+                <path d="M12 18v4"/>
+                <path d="M4 12H2"/>
+                <path d="M22 12h-2"/>
+                <path d="M7 7l-2-2"/>
+                <path d="M19 19l-2-2"/>
+                <path d="M7 17l-2 2"/>
+                <path d="M19 5l-2 2"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <span class="service-card-v2__badge">Automation</span>
           </div>
-          <h3 class="service-card__title">Workflow automation & integrations</h3>
-          <p class="service-card__description">For teams reducing manual effort and improving consistency.</p>
-          <ul class="service-card__list">
-            <li>Automation rules and guardrails</li>
-            <li>Toolchain integrations</li>
-            <li>Operational dashboards</li>
+          <h3 class="service-card-v2__title">Workflow automation & integrations</h3>
+          <p class="service-card-v2__description">For teams reducing manual effort and improving consistency.</p>
+          <ul class="service-card-v2__benefits">
+            <li class="service-card-v2__benefit">Automation rules and guardrails</li>
+            <li class="service-card-v2__benefit">Toolchain integrations</li>
+            <li class="service-card-v2__benefit">Operational dashboards</li>
           </ul>
-          <a href="/services#automation" class="service-card__link">
-            Learn more →
-          </a>
+          <a class="service-card-v2__cta" href="/services/#automation">Learn more</a>
         </article>
       </div>
 
       <div class="text-center mt-8">
-        <a href="/services" class="btn btn--secondary btn--lg">Explore all services</a>
+        <a href="/services/" class="btn btn--secondary btn--lg">Explore all services</a>
       </div>
     </div>
   </section>
@@ -304,25 +329,25 @@
       </div>
 
       <div class="grid grid--4">
-        <a href="/approach#discovery-diagnosis" class="glass-card phase-card reveal">
+        <a href="/approach/#discovery-diagnosis" class="glass-card phase-card reveal">
           <span class="phase-card__badge">Phase 1</span>
           <h3 class="phase-card__title">Discovery & diagnosis</h3>
           <p class="phase-card__text">Understand context, pain points, and success criteria.</p>
         </a>
 
-        <a href="/approach#mapping-path" class="glass-card phase-card reveal">
+        <a href="/approach/#mapping-path" class="glass-card phase-card reveal">
           <span class="phase-card__badge">Phase 2</span>
           <h3 class="phase-card__title">Mapping the path</h3>
           <p class="phase-card__text">Define priorities, design the operating model, align stakeholders.</p>
         </a>
 
-        <a href="/approach#implementation" class="glass-card phase-card reveal">
+        <a href="/approach/#implementation" class="glass-card phase-card reveal">
           <span class="phase-card__badge">Phase 3</span>
           <h3 class="phase-card__title">Implementation & integration</h3>
           <p class="phase-card__text">Build workflows and automation that fit how teams work.</p>
         </a>
 
-        <a href="/approach#knowledge-transfer" class="glass-card phase-card reveal">
+        <a href="/approach/#knowledge-transfer" class="glass-card phase-card reveal">
           <span class="phase-card__badge">Phase 4</span>
           <h3 class="phase-card__title">Knowledge transfer</h3>
           <p class="phase-card__text">Embed practices, train teams, and hand over confidently.</p>
@@ -330,7 +355,7 @@
       </div>
 
       <div class="text-center mt-8">
-        <a href="/approach" class="btn btn--primary btn--lg">Explore the full framework</a>
+        <a href="/approach/" class="btn btn--primary btn--lg">Explore the full framework</a>
       </div>
     </div>
   </section>
@@ -391,8 +416,8 @@
         We will validate your priorities, outline a first sprint, and agree the best path forward.
       </p>
       <div class="hero__cta mt-8">
-        <a href="/contact" class="btn btn--primary btn--lg">Book a short call</a>
-        <a href="/approach" class="btn btn--secondary btn--lg">View our approach</a>
+        <a href="/contact/" class="btn btn--primary btn--lg">Book a short call</a>
+        <a href="/approach/" class="btn btn--secondary btn--lg">View our approach</a>
       </div>
     </div>
   </section>
@@ -411,17 +436,17 @@
         <div>
           <h3 class="footer__heading">Company</h3>
           <ul class="footer__list">
-            <li><a href="/about" class="footer__link">About LT.Solutions</a></li>
-            <li><a href="/services" class="footer__link">Services</a></li>
-            <li><a href="/approach" class="footer__link">Our Approach</a></li>
-            <li><a href="/insights" class="footer__link">Insights</a></li>
+            <li><a href="/about/" class="footer__link">About LT.Solutions</a></li>
+            <li><a href="/services/" class="footer__link">Services</a></li>
+            <li><a href="/approach/" class="footer__link">Our Approach</a></li>
+            <li><a href="/insights/" class="footer__link">Insights</a></li>
           </ul>
         </div>
 
         <div>
           <h3 class="footer__heading">Connect</h3>
           <ul class="footer__list">
-            <li><a href="/contact" class="footer__link">Contact Us</a></li>
+            <li><a href="/contact/" class="footer__link">Contact Us</a></li>
             <li><a href="mailto:hello@lt.solutions" class="footer__link">hello@lt.solutions</a></li>
             <li><a href="https://www.linkedin.com/in/andreas-l-a-nyberg/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a></li>
           </ul>
@@ -430,8 +455,8 @@
         <div>
           <h3 class="footer__heading">Legal</h3>
           <ul class="footer__list">
-            <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
-            <li><a href="/legal" class="footer__link">Legal Notice</a></li>
+            <li><a href="/privacy/" class="footer__link">Privacy Policy</a></li>
+            <li><a href="/legal/" class="footer__link">Legal Notice</a></li>
           </ul>
         </div>
       </div>

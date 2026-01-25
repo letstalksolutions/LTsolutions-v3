@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Database - Speech bubble with cylinder -->
+  <path d="M4 4C4 2.9 4.9 2 6 2H26C27.1 2 28 2.9 28 4V20C28 21.1 27.1 22 26 22H18L12 28V22H6C4.9 22 4 21.1 4 20V4Z" fill="#C41E3A"/>
+  <!-- Database cylinder -->
+  <ellipse cx="16" cy="7" rx="7" ry="2.5" fill="white"/>
+  <path d="M9 7V17C9 18.38 12.13 19.5 16 19.5C19.87 19.5 23 18.38 23 17V7" fill="white"/>
+  <!-- Data rows -->
+  <path d="M9 11C9 12.38 12.13 13.5 16 13.5C19.87 13.5 23 12.38 23 11" stroke="#C41E3A" stroke-opacity="0.3" stroke-width="1"/>
+  <path d="M9 14.5C9 15.88 12.13 17 16 17C19.87 17 23 15.88 23 14.5" stroke="#C41E3A" stroke-opacity="0.3" stroke-width="1"/>
+</svg>

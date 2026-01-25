@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Software License - Speech bubble with key -->
+  <path d="M4 4C4 2.9 4.9 2 6 2H26C27.1 2 28 2.9 28 4V20C28 21.1 27.1 22 26 22H18L12 28V22H6C4.9 22 4 21.1 4 20V4Z" fill="#C41E3A"/>
+  <!-- Key circle -->
+  <circle cx="11" cy="12" r="4" fill="white"/>
+  <circle cx="11" cy="12" r="1.5" fill="#C41E3A"/>
+  <!-- Key shaft -->
+  <rect x="14" y="11" width="10" height="2" rx="1" fill="white"/>
+  <!-- Key teeth -->
+  <rect x="20" y="13" width="1.5" height="2" rx="0.5" fill="white"/>
+  <rect x="23" y="13" width="1.5" height="3" rx="0.5" fill="white"/>
+</svg>

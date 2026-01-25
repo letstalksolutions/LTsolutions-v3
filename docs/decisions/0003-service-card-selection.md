@@ -1,10 +1,10 @@
 # ADR 0003: Service card selection for production
 
 ## Status
-Decided
+Superseded - card variants archived to archive/lab-card-variants/
 
 ## Context
-Three service card variants exist in lab/:
+Three service card variants were created in lab/ (now archived to archive/lab-card-variants/):
 1. Original baseline from styles-unified.css
 2. Codex Enhanced (modifier approach using .service-card--enhanced)
 3. Claude V2 Enhanced (standalone .service-card-enhanced)

@@ -6,9 +6,10 @@ You are the orchestrator.
 
 Objectives for this step
 1) Lock production-ready homepage copy.
-2) Decide which lab service card variant (if any) is eligible for promotion.
-3) Prepare Sky to implement without inventing strategy.
-4) Decide whether Gemini research is required now or later.
+2) Prepare Sky to implement without inventing strategy.
+3) Decide whether Gemini research is required now or later.
+
+Note: Card variant experiments archived to archive/lab-card-variants/. Decision documented in docs/decisions/0003-service-card-selection.md (status: superseded).
 
 Tasks
 1) Write homepage copy blocks to:
@@ -32,14 +33,7 @@ Tasks
    - SEO basics
    - Content clarity checks
 
-3) Review lab/components/service-cards/variants and decide:
-   - Which single variant is eligible for production, or
-   - That none should be promoted yet
-
-   Write the decision to:
-   docs/decisions/0003-service-card-selection.md
-
-4) Create Sky’s task list at:
+3) Create Sky's task list at:
    docs/runbooks/tasks-for-sky.md
 
    Include:
@@ -47,7 +41,7 @@ Tasks
    - Acceptance criteria
    - Explicit instruction not to invent copy
 
-5) Decide if Gemini research is required now.
+4) Decide if Gemini research is required now.
    If yes, specify exactly what questions Gemini should answer.
 
 Completion rule

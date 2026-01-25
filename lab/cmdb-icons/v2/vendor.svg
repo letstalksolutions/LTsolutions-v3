@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vendor - Speech bubble with building -->
+  <path d="M4 4C4 2.9 4.9 2 6 2H26C27.1 2 28 2.9 28 4V20C28 21.1 27.1 22 26 22H18L12 28V22H6C4.9 22 4 21.1 4 20V4Z" fill="#C41E3A"/>
+  <!-- Building -->
+  <rect x="8" y="6" width="16" height="14" rx="1" fill="white"/>
+  <!-- Windows -->
+  <rect x="10" y="8" width="3" height="3" rx="0.5" fill="#C41E3A"/>
+  <rect x="14.5" y="8" width="3" height="3" rx="0.5" fill="#C41E3A"/>
+  <rect x="19" y="8" width="3" height="3" rx="0.5" fill="#C41E3A"/>
+  <rect x="10" y="13" width="3" height="3" rx="0.5" fill="#C41E3A"/>
+  <rect x="19" y="13" width="3" height="3" rx="0.5" fill="#C41E3A"/>
+  <!-- Door -->
+  <rect x="14.5" y="14" width="3" height="6" rx="0.5" fill="#C41E3A"/>
+</svg>

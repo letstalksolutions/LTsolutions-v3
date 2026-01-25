@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Team - Multiple people with red connector -->
+  <!-- Back person -->
+  <circle cx="10" cy="10" r="4" fill="#4A5568" fill-opacity="0.6"/>
+  <path d="M3 24C3 19.58 6.58 16 11 16H9C13.42 16 17 19.58 17 24V26H3V24Z" fill="#4A5568" fill-opacity="0.6"/>
+  <!-- Front person -->
+  <circle cx="22" cy="10" r="4" fill="#4A5568"/>
+  <path d="M15 24C15 19.58 18.58 16 23 16H21C25.42 16 29 19.58 29 24V26H15V24Z" fill="#4A5568"/>
+  <!-- Red connecting line -->
+  <path d="M14 12L18 12" stroke="#C41E3A" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="16" cy="12" r="3" fill="#C41E3A"/>
+</svg>

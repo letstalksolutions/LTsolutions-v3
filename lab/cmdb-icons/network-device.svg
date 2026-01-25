@@ -1,0 +1,21 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Network Device - Router/switch with connection points -->
+  <rect x="2" y="12" width="28" height="12" rx="2" fill="#4A5568"/>
+  <!-- Antenna indicators with red accent -->
+  <rect x="6" y="6" width="2" height="6" rx="1" fill="#C41E3A"/>
+  <rect x="24" y="6" width="2" height="6" rx="1" fill="#C41E3A"/>
+  <path d="M7 4C7 4 4 6 4 8" stroke="#C41E3A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M7 4C7 4 10 6 10 8" stroke="#C41E3A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M25 4C25 4 22 6 22 8" stroke="#C41E3A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M25 4C25 4 28 6 28 8" stroke="#C41E3A" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Status lights -->
+  <circle cx="7" cy="18" r="2" fill="#00875A"/>
+  <circle cx="13" cy="18" r="2" fill="#00875A"/>
+  <circle cx="19" cy="18" r="2" fill="white" fill-opacity="0.3"/>
+  <circle cx="25" cy="18" r="2" fill="white" fill-opacity="0.3"/>
+  <!-- Connection ports -->
+  <rect x="5" y="24" width="4" height="2" fill="white" fill-opacity="0.5"/>
+  <rect x="11" y="24" width="4" height="2" fill="white" fill-opacity="0.5"/>
+  <rect x="17" y="24" width="4" height="2" fill="white" fill-opacity="0.5"/>
+  <rect x="23" y="24" width="4" height="2" fill="white" fill-opacity="0.5"/>
+</svg>

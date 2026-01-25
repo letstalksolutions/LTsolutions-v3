@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vendor - Building/storefront with red awning -->
+  <rect x="4" y="10" width="24" height="18" rx="2" fill="#4A5568"/>
+  <!-- Red awning -->
+  <path d="M2 10L4 4H28L30 10H2Z" fill="#C41E3A"/>
+  <path d="M6 10C6 8 8 8 10 10C12 8 14 8 16 10C18 8 20 8 22 10C24 8 26 8 26 10" stroke="#C41E3A" stroke-width="2"/>
+  <!-- Windows -->
+  <rect x="7" y="14" width="5" height="5" rx="1" fill="white" fill-opacity="0.9"/>
+  <rect x="20" y="14" width="5" height="5" rx="1" fill="white" fill-opacity="0.9"/>
+  <!-- Door -->
+  <rect x="13" y="18" width="6" height="10" rx="1" fill="white" fill-opacity="0.9"/>
+</svg>

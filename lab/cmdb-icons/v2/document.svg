@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document - Speech bubble with paper -->
+  <path d="M4 4C4 2.9 4.9 2 6 2H26C27.1 2 28 2.9 28 4V20C28 21.1 27.1 22 26 22H18L12 28V22H6C4.9 22 4 21.1 4 20V4Z" fill="#C41E3A"/>
+  <!-- Document -->
+  <path d="M10 5C10 4.45 10.45 4 11 4H18L22 8V19C22 19.55 21.55 20 21 20H11C10.45 20 10 19.55 10 19V5Z" fill="white"/>
+  <!-- Corner fold -->
+  <path d="M18 4V8H22L18 4Z" fill="#C41E3A" fill-opacity="0.2"/>
+  <!-- Text lines -->
+  <rect x="12" y="10" width="8" height="1.5" rx="0.75" fill="#C41E3A" fill-opacity="0.3"/>
+  <rect x="12" y="13" width="6" height="1.5" rx="0.75" fill="#C41E3A" fill-opacity="0.3"/>
+  <rect x="12" y="16" width="7" height="1.5" rx="0.75" fill="#C41E3A" fill-opacity="0.3"/>
+</svg>

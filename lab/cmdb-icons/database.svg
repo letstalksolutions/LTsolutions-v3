@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Database - Classic cylinder with red accent -->
+  <ellipse cx="16" cy="7" rx="11" ry="4" fill="#C41E3A"/>
+  <path d="M5 7V25C5 27.21 9.92 29 16 29C22.08 29 27 27.21 27 25V7" fill="#4A5568"/>
+  <ellipse cx="16" cy="7" rx="11" ry="4" fill="#C41E3A"/>
+  <!-- Data rows -->
+  <path d="M5 14C5 16.21 9.92 18 16 18C22.08 18 27 16.21 27 14" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/>
+  <path d="M5 20C5 22.21 9.92 24 16 24C22.08 24 27 22.21 27 20" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/>
+</svg>

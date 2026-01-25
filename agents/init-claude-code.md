@@ -2,7 +2,8 @@
 
 ## Repo structure
 - site/ = production website only
-- lab/ = experiments and comparisons
+- lab/ = active experiments (currently empty)
+- archive/ = completed or abandoned experiments
 - docs/ = briefs, decisions, positioning, reviews
 - agents/ = tool init and agent briefs
 

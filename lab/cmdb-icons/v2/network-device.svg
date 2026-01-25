@@ -1,0 +1,15 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Network Device - Speech bubble with router -->
+  <path d="M4 4C4 2.9 4.9 2 6 2H26C27.1 2 28 2.9 28 4V20C28 21.1 27.1 22 26 22H18L12 28V22H6C4.9 22 4 21.1 4 20V4Z" fill="#C41E3A"/>
+  <!-- Router body -->
+  <rect x="7" y="10" width="18" height="8" rx="1.5" fill="white"/>
+  <!-- Antenna left -->
+  <rect x="10" y="5" width="2" height="5" rx="1" fill="white"/>
+  <!-- Antenna right -->
+  <rect x="20" y="5" width="2" height="5" rx="1" fill="white"/>
+  <!-- Status lights -->
+  <circle cx="10" cy="14" r="1.5" fill="#00875A"/>
+  <circle cx="14" cy="14" r="1.5" fill="#00875A"/>
+  <circle cx="18" cy="14" r="1.5" fill="#C41E3A" fill-opacity="0.3"/>
+  <circle cx="22" cy="14" r="1.5" fill="#C41E3A" fill-opacity="0.3"/>
+</svg>

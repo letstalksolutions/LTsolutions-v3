@@ -22,3 +22,5 @@ build/
 # Env
 .env
 .env.*
+.claude/
+.grok/

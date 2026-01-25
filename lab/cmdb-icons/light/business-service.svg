@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Business Service - Light version -->
+  <!-- Large gear - red -->
+  <circle cx="12" cy="18" r="8" fill="#C41E3A"/>
+  <circle cx="12" cy="18" r="4" fill="white"/>
+  <path d="M12 8V10M12 26V28M4 18H2M22 18H20M5.76 11.76L7.17 13.17M16.83 22.83L18.24 24.24M5.76 24.24L7.17 22.83M16.83 13.17L18.24 11.76" stroke="#C41E3A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Small gear - navy accent -->
+  <circle cx="22" cy="10" r="5" fill="#4A5568"/>
+  <circle cx="22" cy="10" r="2.5" fill="white"/>
+  <path d="M22 4V5.5M22 14.5V16M17 10H15.5M28.5 10H27M18.17 6.17L19.23 7.23M24.77 12.77L25.83 13.83M18.17 13.83L19.23 12.77M24.77 7.23L25.83 6.17" stroke="#4A5568" stroke-width="2" stroke-linecap="round"/>
+</svg>

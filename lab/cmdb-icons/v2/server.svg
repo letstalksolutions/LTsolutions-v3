@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Server - Speech bubble with rack -->
+  <path d="M4 4C4 2.9 4.9 2 6 2H26C27.1 2 28 2.9 28 4V20C28 21.1 27.1 22 26 22H18L12 28V22H6C4.9 22 4 21.1 4 20V4Z" fill="#C41E3A"/>
+  <!-- Server rack -->
+  <rect x="8" y="5" width="16" height="5" rx="1" fill="white"/>
+  <rect x="8" y="11" width="16" height="5" rx="1" fill="white"/>
+  <rect x="8" y="17" width="16" height="3" rx="1" fill="white" fill-opacity="0.7"/>
+  <!-- Status lights -->
+  <circle cx="11" cy="7.5" r="1" fill="#00875A"/>
+  <circle cx="11" cy="13.5" r="1" fill="#00875A"/>
+  <!-- Vents -->
+  <rect x="15" y="6.5" width="6" height="1" rx="0.5" fill="#C41E3A" fill-opacity="0.2"/>
+  <rect x="15" y="12.5" width="6" height="1" rx="0.5" fill="#C41E3A" fill-opacity="0.2"/>
+</svg>

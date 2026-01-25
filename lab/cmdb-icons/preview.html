@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMDB Icons - LT.Solutions Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #F8FAFB;
+      min-height: 100vh;
+      padding: 40px;
+      color: #1A202C;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #7B8794;
+      margin-bottom: 40px;
+    }
+    .accent {
+      color: #C41E3A;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #E4E9ED;
+    }
+    .section-desc {
+      font-size: 0.875rem;
+      color: #7B8794;
+      margin-bottom: 20px;
+    }
+
+    /* Dark section */
+    .dark-section {
+      background: linear-gradient(135deg, #1A202C 0%, #2D3748 100%);
+      border-radius: 16px;
+      padding: 32px;
+      color: #fff;
+    }
+    .dark-section .section-title {
+      color: #fff;
+    }
+    .dark-section .section-title::after {
+      background: rgba(255,255,255,0.1);
+    }
+    .dark-section .section-desc {
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Light blue section */
+    .light-section {
+      background: linear-gradient(135deg, #E8F4FD 0%, #F0F7FF 100%);
+      border: 1px solid #C9E0F5;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .light-section .section-title::after {
+      background: #A8D1F0;
+    }
+
+    /* V2 section - featured */
+    .v2-section {
+      background: linear-gradient(135deg, #FFF5F5 0%, #FFFFFF 100%);
+      border: 2px solid #C41E3A;
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+    .v2-section::before {
+      content: 'NEW';
+      position: absolute;
+      top: -10px;
+      left: 24px;
+      background: #C41E3A;
+      color: white;
+      font-size: 0.625rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    .v2-section .section-title::after {
+      background: rgba(196, 30, 58, 0.2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 20px;
+    }
+
+    .icon-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .dark-section .icon-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: #C41E3A;
+      transform: translateY(-4px);
+    }
+    .light-section .icon-card {
+      background: rgba(255,255,255,0.7);
+      border-color: #C9E0F5;
+    }
+    .light-section .icon-card:hover {
+      background: #fff;
+      border-color: #C41E3A;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,82,204,0.12);
+    }
+    .v2-section .icon-card {
+      background: #fff;
+      border-color: #E4E9ED;
+    }
+    .v2-section .icon-card:hover {
+      border-color: #C41E3A;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(196,30,58,0.15);
+    }
+
+    .icon-card img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+    }
+    .icon-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .dark-section .icon-card h3 {
+      color: #fff;
+    }
+    .light-section .icon-card h3,
+    .v2-section .icon-card h3 {
+      color: #1A202C;
+    }
+
+    .legend {
+      margin-top: 48px;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid #E4E9ED;
+      border-radius: 12px;
+    }
+    .legend h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    .color-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .color-swatch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+    }
+    .swatch {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      border: 1px solid #E4E9ED;
+    }
+    .swatch-navy { background: #2D3748; }
+    .swatch-red { background: #C41E3A; }
+    .swatch-green { background: #00875A; }
+    .swatch-white { background: #FFFFFF; }
+    .swatch-lightblue { background: #E8F4FD; }
+
+    .usage-note {
+      margin-top: 16px;
+      padding: 16px;
+      background: #F8FAFB;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      color: #616E7C;
+    }
+    .usage-note strong {
+      color: #1A202C;
+    }
+  </style>
+</head>
+<body>
+  <h1>CMDB Object Icons <span class="accent">.</span></h1>
+  <p class="subtitle">JSM Assets style with LT.Solutions brand identity</p>
+
+  <!-- V2 Collection - Speech Bubble Design -->
+  <div class="section v2-section">
+    <h2 class="section-title">V2 Collection - Speech Bubble Design (Proprietary)</h2>
+    <p class="section-desc">Unique design incorporating LT.Solutions speech bubble motif. Each icon uses the bubble as a container, creating a distinctive and ownable visual language.</p>
+    <div class="grid">
+      <div class="icon-card">
+        <img src="v2/location.svg" alt="Location">
+        <h3>Location</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/person.svg" alt="Person">
+        <h3>Person</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/team.svg" alt="Team">
+        <h3>Team</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/vendor.svg" alt="Vendor">
+        <h3>Vendor</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/business-service.svg" alt="Business Service">
+        <h3>Business Service</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/application.svg" alt="Application">
+        <h3>Application</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/cloud-resource.svg" alt="Cloud Resource">
+        <h3>Cloud Resource</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/network-device.svg" alt="Network Device">
+        <h3>Network Device</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/database.svg" alt="Database">
+        <h3>Database</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/server.svg" alt="Server">
+        <h3>Server</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/software-license.svg" alt="Software License">
+        <h3>Software License</h3>
+      </div>
+      <div class="icon-card">
+        <img src="v2/document.svg" alt="Document">
+        <h3>Document</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Background Version -->
+  <div class="section dark-section">
+    <h2 class="section-title">V1 Dark Background (Soft slate primary)</h2>
+    <p class="section-desc">Original collection with softer slate tones for dark interfaces.</p>
+    <div class="grid">
+      <div class="icon-card">
+        <img src="location.svg" alt="Location">
+        <h3>Location</h3>
+      </div>
+      <div class="icon-card">
+        <img src="person.svg" alt="Person">
+        <h3>Person</h3>
+      </div>
+      <div class="icon-card">
+        <img src="team.svg" alt="Team">
+        <h3>Team</h3>
+      </div>
+      <div class="icon-card">
+        <img src="vendor.svg" alt="Vendor">
+        <h3>Vendor</h3>
+      </div>
+      <div class="icon-card">
+        <img src="business-service.svg" alt="Business Service">
+        <h3>Business Service</h3>
+      </div>
+      <div class="icon-card">
+        <img src="application.svg" alt="Application">
+        <h3>Application</h3>
+      </div>
+      <div class="icon-card">
+        <img src="cloud-resource.svg" alt="Cloud Resource">
+        <h3>Cloud Resource</h3>
+      </div>
+      <div class="icon-card">
+        <img src="network-device.svg" alt="Network Device">
+        <h3>Network Device</h3>
+      </div>
+      <div class="icon-card">
+        <img src="database.svg" alt="Database">
+        <h3>Database</h3>
+      </div>
+      <div class="icon-card">
+        <img src="server.svg" alt="Server">
+        <h3>Server</h3>
+      </div>
+      <div class="icon-card">
+        <img src="software-license.svg" alt="Software License">
+        <h3>Software License</h3>
+      </div>
+      <div class="icon-card">
+        <img src="document.svg" alt="Document">
+        <h3>Document</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Light Background Version -->
+  <div class="section light-section">
+    <h2 class="section-title">V1 Light Blue Background (Red primary)</h2>
+    <p class="section-desc">Original collection optimized for light interfaces.</p>
+    <div class="grid">
+      <div class="icon-card">
+        <img src="light/location.svg" alt="Location">
+        <h3>Location</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/person.svg" alt="Person">
+        <h3>Person</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/team.svg" alt="Team">
+        <h3>Team</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/vendor.svg" alt="Vendor">
+        <h3>Vendor</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/business-service.svg" alt="Business Service">
+        <h3>Business Service</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/application.svg" alt="Application">
+        <h3>Application</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/cloud-resource.svg" alt="Cloud Resource">
+        <h3>Cloud Resource</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/network-device.svg" alt="Network Device">
+        <h3>Network Device</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/database.svg" alt="Database">
+        <h3>Database</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/server.svg" alt="Server">
+        <h3>Server</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/software-license.svg" alt="Software License">
+        <h3>Software License</h3>
+      </div>
+      <div class="icon-card">
+        <img src="light/document.svg" alt="Document">
+        <h3>Document</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <h2>Color Palette</h2>
+    <div class="color-row">
+      <div class="color-swatch">
+        <div class="swatch swatch-navy"></div>
+        <span>Soft Slate #2D3748</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch swatch-red"></div>
+        <span>LT Red #C41E3A</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch swatch-green"></div>
+        <span>Trust Green #00875A</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch swatch-white"></div>
+        <span>White #FFFFFF</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch swatch-lightblue"></div>
+        <span>Light Blue #E8F4FD</span>
+      </div>
+    </div>
+    <div class="usage-note">
+      <strong>V2 Recommendation:</strong> The speech bubble collection is proprietary and unique to LT.Solutions. It incorporates the brand's signature speech bubble motif into every icon, creating a distinctive and ownable visual language for your CMDB.
+    </div>
+  </div>
+</body>
+</html>
