@@ -46,6 +46,7 @@
   <script src="../js/glow-sync.js" defer></script>
 </head>
 <body class="bg-dark">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
   <header class="header" role="banner">
@@ -95,7 +96,7 @@
       <div class="grid grid--2">
         <article class="insight-card reveal">
           <div class="insight-card__image">
-            <img src="../images/will-kew-bench.jpg" alt="A bench at Kew Gardens" loading="lazy" decoding="async">
+            <img src="../images/the_relay.png" alt="Abstract illustration representing the relay of belief, building, and becoming" loading="lazy" decoding="async">
           </div>
           <span class="insight-card__tag">Signature story</span>
           <div class="insight-card__content">
@@ -110,7 +111,7 @@
 
         <article class="insight-card reveal">
           <div class="insight-card__image">
-            <img src="../images/bench+image.png" alt="The build process in motion" loading="lazy" decoding="async">
+            <img src="../images/behind_the_build.png" alt="Illustration of the collaborative website build process" loading="lazy" decoding="async">
           </div>
           <span class="insight-card__tag">Process</span>
           <div class="insight-card__content">
@@ -125,7 +126,7 @@
 
         <article class="insight-card reveal">
           <div class="insight-card__image">
-            <img src="../images/mint-seed-pot.jpg" alt="A small mint pot symbolising new beginnings" loading="lazy" decoding="async">
+            <img src="../images/A Familiar Connection.png" alt="A familiar connection — memory, new beginnings, and the ties between past and present" loading="lazy" decoding="async">
           </div>
           <span class="insight-card__tag">Reflection</span>
           <div class="insight-card__content">
@@ -236,20 +237,17 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Header scroll behavior
+    // Header scroll behavior — hide on scroll down, show on scroll up
     const header = document.querySelector('.header');
-    let lastScroll = 0;
+    let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > 100) {
-        header.classList.add('header--scrolled');
+      if (window.scrollY > lastScrollY && window.scrollY > 120) {
+        header.classList.add('header--hidden');
       } else {
-        header.classList.remove('header--scrolled');
+        header.classList.remove('header--hidden');
       }
-
-      lastScroll = currentScroll;
+      lastScrollY = window.scrollY;
     });
 
     // Mobile menu toggle

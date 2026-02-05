@@ -44,6 +44,9 @@
 
   <!-- Glow Sync Script -->
   <script src="../js/glow-sync.js" defer></script>
+
+  <!-- Shared JS -->
+  <script src="../js/main.js" defer></script>
 </head>
 <body class="bg-dark">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -85,25 +88,27 @@
   </section>
 
   <!-- About Andreas -->
-  <section class="section section--dark">
+  <section class="section section--light">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">About Andreas</span>
+        <img src="../images/andreas.jpeg" alt="Andreas Nyberg, founder of LT.Solutions" width="200" height="200" class="about-portrait" loading="lazy">
+        <span class="section-tag" style="margin-top: var(--space-4);">About Andreas</span>
         <h2 class="section-title">Hands-on Atlassian delivery</h2>
         <p class="section-subtitle">
-          15+ years in workflow automation and ITSM transformation, supporting global rollouts and operational change.
+          ITSM specialist and Atlassian consultant with more than 15 years spent shaping workflow automation, tooling strategy, and service management transformation.
         </p>
       </div>
 
       <div class="grid grid--2">
         <div class="reveal">
           <p class="glass-card__text">
-            LT.Solutions is led by Andreas Nyberg, an Atlassian consultant focused on Jira Service Management, Assets (CMDB), and Opsgenie.
-            The work centres on building service operations that are reliable, measurable, and owned by internal teams.
+            I'm Andreas Nyberg. I've spent my career helping organisations get measurable value from their Atlassian service stack -- Jira Service Management, Assets (CMDB), and Opsgenie. That work has included supporting global rollouts spanning 4,000 to 5,000 seats across multiple regions, where the challenge is never just the tooling but how teams adopt, own, and sustain it.
           </p>
           <p class="glass-card__text">
-            Engagements combine deep tool configuration with process design, helping service owners move from reactive workflows to clear escalation
-            paths, automation, and knowledge practices that last beyond the project.
+            More than configuration, my focus is the human side of transformation: understanding how teams actually work, identifying which processes need to change, and building knowledge that stays long after the engagement ends. I believe in orchestration over automation -- tools don't solve problems; people who know how to orchestrate tools solve problems.
+          </p>
+          <p class="glass-card__text" style="margin-top: var(--space-4);">
+            <a href="https://www.linkedin.com/in/andreas-l-a-nyberg/" target="_blank" rel="noopener" class="service-card-v2__cta">Connect on LinkedIn</a>
           </p>
         </div>
 
@@ -116,9 +121,10 @@
             </svg>
           </div>
           <h3 class="value-card__title">Experience snapshot</h3>
-          <p class="value-card__text">4,000–5,000 seat global rollouts across multiple regions.</p>
+          <p class="value-card__text">15+ years in workflow automation and ITSM.</p>
+          <p class="value-card__text">Global rollouts of 4,000-5,000 seats across multiple regions.</p>
           <p class="value-card__text">Deep JSM, Assets, and Opsgenie specialism.</p>
-          <p class="value-card__text">Focus on documentation and handover for independence.</p>
+          <p class="value-card__text">Focus on documentation and handover for team independence.</p>
         </div>
       </div>
     </div>
@@ -129,26 +135,31 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Philosophy</span>
-        <h2 class="section-title">What guides the work</h2>
+        <h2 class="section-title">What I believe</h2>
         <p class="section-subtitle">
-          The goal is always the same: make service operations clearer, calmer, and easier to own.
+          Four principles that shape every engagement, from discovery through to handover.
         </p>
       </div>
 
-      <div class="grid grid--3">
+      <div class="grid grid--2" style="gap: var(--space-8);">
         <div class="glass-card reveal">
-          <h3 class="phase-card__title">Operational clarity</h3>
-          <p class="glass-card__text">Every workflow should be easy to understand, measure, and improve.</p>
+          <h3 class="phase-card__title">Orchestration over automation</h3>
+          <p class="glass-card__text">The value is never in the tool itself -- it is in knowing how to use it well. Automation without understanding creates fragile systems. Orchestration creates sustainable ones.</p>
         </div>
 
         <div class="glass-card reveal">
-          <h3 class="phase-card__title">Human-centered automation</h3>
-          <p class="glass-card__text">Automation should reduce friction while keeping ownership with the people doing the work.</p>
+          <h3 class="phase-card__title">Knowledge transfer as success</h3>
+          <p class="glass-card__text">A consultant who leaves you dependent has failed. Every engagement should end with your team able to maintain, extend, and troubleshoot without outside help.</p>
         </div>
 
         <div class="glass-card reveal">
-          <h3 class="phase-card__title">Knowledge that stays</h3>
-          <p class="glass-card__text">Documentation, training, and handover are part of delivery, not an afterthought.</p>
+          <h3 class="phase-card__title">Iteration over perfection</h3>
+          <p class="glass-card__text">"Not quite right yet" is a feature, not a bug. Building iteratively means catching issues early and adapting to what actually works in your context.</p>
+        </div>
+
+        <div class="glass-card reveal">
+          <h3 class="phase-card__title">Honest assessment</h3>
+          <p class="glass-card__text">Not every problem needs a consultant. If your challenge is better solved internally or with a different approach, I will tell you. Trust is built on honesty, not on selling hours.</p>
         </div>
       </div>
     </div>
@@ -161,32 +172,45 @@
         <span class="section-tag">Company</span>
         <h2 class="section-title">LT.Solutions at a glance</h2>
         <p class="section-subtitle">
-          A boutique consultancy focused on Atlassian service management and sustainable operations.
+          Let's Talk Solutions Ltd -- a UK-based consultancy focused on Atlassian service management.
         </p>
       </div>
 
-      <div class="grid grid--2">
+      <div class="grid grid--3">
         <div class="value-card reveal">
           <div class="value-card__icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
             </svg>
           </div>
-          <h3 class="value-card__title">Enterprise-ready</h3>
-          <p class="value-card__text">Experience aligning tooling strategy, governance, and service ownership.</p>
+          <h3 class="value-card__title">Focus</h3>
+          <p class="value-card__text">Jira Service Management, Assets (CMDB), Opsgenie, and workflow automation. Deep expertise across the Atlassian service stack.</p>
         </div>
 
         <div class="value-card reveal">
           <div class="value-card__icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v18"/>
-              <path d="M5 7h14"/>
-              <path d="M5 17h14"/>
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3 class="value-card__title">Structured delivery</h3>
-          <p class="value-card__text">A four-phase approach that prioritises clarity, speed, and knowledge transfer.</p>
+          <h3 class="value-card__title">Clients</h3>
+          <p class="value-card__text">IT operations leaders and service delivery teams who need measurable improvement without losing control of their operations.</p>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="value-card__title">Approach</h3>
+          <p class="value-card__text">Four-phase delivery -- discovery, planning, implementation, and knowledge transfer. Every engagement follows a clear, repeatable process.</p>
         </div>
       </div>
     </div>
@@ -214,7 +238,7 @@
         <div>
           <img src="../images/logo-footer.svg" alt="LT.Solutions logo" class="footer__logo" loading="lazy" decoding="async">
           <p class="footer__summary">
-            Hands-on Atlassian expertise that modernises workflows and builds knowledge that stays.
+            Atlassian expertise that modernises workflows and builds products that solve real problems in the ecosystem.
           </p>
         </div>
 
@@ -225,6 +249,13 @@
             <li><a href="/services/" class="footer__link">Services</a></li>
             <li><a href="/approach/" class="footer__link">Our Approach</a></li>
             <li><a href="/insights/" class="footer__link">Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Products</h3>
+          <ul class="footer__list">
+            <li><a href="https://schema-forge.com" class="footer__link" target="_blank" rel="noopener">Schema Forge</a></li>
           </ul>
         </div>
 
@@ -254,50 +285,6 @@
     </div>
   </footer>
 
-  <!-- Scroll Reveal Script -->
-  <script>
-    // Scroll reveal animation
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Header scroll behavior
-    const header = document.querySelector('.header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > 100) {
-        header.classList.add('header--scrolled');
-      } else {
-        header.classList.remove('header--scrolled');
-      }
-
-      lastScroll = currentScroll;
-    });
-
-    // Mobile menu toggle
-    const navToggle = document.querySelector('.nav__toggle');
-    const navMenu = document.querySelector('.nav__menu');
-
-    navToggle?.addEventListener('click', () => {
-      const isOpen = navMenu.classList.contains('nav__menu--open');
-      navMenu.classList.toggle('nav__menu--open');
-      navToggle.setAttribute('aria-expanded', !isOpen);
-    });
-  </script>
 
 </body>
 </html>

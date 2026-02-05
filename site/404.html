@@ -21,6 +21,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
+
+  <!-- Glow Sync Script -->
+  <script src="js/glow-sync.js" defer></script>
+
+  <!-- Shared JS -->
+  <script src="js/main.js" defer></script>
 </head>
 <body class="bg-dark">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -50,7 +56,7 @@
     </div>
   </header>
 
-  <section class="section section--dark page-hero page-hero--red" id="main-content" style="min-height: 60vh; display: flex; align-items: center;">
+  <section class="section section--dark page-hero page-hero--red page-hero--centered" id="main-content">
     <div class="container text-center">
       <span class="section-tag">404</span>
       <h1 class="page-hero__title">Page not found</h1>
@@ -70,7 +76,7 @@
         <div>
           <img src="/images/logo-footer.svg" alt="LT.Solutions logo" class="footer__logo" loading="lazy" decoding="async">
           <p class="footer__summary">
-            Hands-on Atlassian expertise that modernises workflows and builds knowledge that stays.
+            Atlassian expertise that modernises workflows and builds products that solve real problems in the ecosystem.
           </p>
         </div>
 
@@ -81,6 +87,13 @@
             <li><a href="/services/" class="footer__link">Services</a></li>
             <li><a href="/approach/" class="footer__link">Our Approach</a></li>
             <li><a href="/insights/" class="footer__link">Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Products</h3>
+          <ul class="footer__list">
+            <li><a href="https://schema-forge.com" class="footer__link" target="_blank" rel="noopener">Schema Forge</a></li>
           </ul>
         </div>
 
@@ -109,23 +122,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const navToggle = document.querySelector('.nav__toggle');
-    const navMenu = document.querySelector('.nav__menu');
-
-    navToggle?.addEventListener('click', () => {
-      const isOpen = navMenu.classList.contains('nav__menu--open');
-      navMenu.classList.toggle('nav__menu--open');
-      navToggle.setAttribute('aria-expanded', !isOpen);
-    });
-
-    navMenu?.querySelectorAll('.nav__link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('nav__menu--open');
-        navToggle?.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
 </body>
 </html>

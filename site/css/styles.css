@@ -18,6 +18,7 @@
   --color-navy: #0B1728;
   --color-red: #C41E3A;
   --color-white: #FFFFFF;
+  --color-red-dark: #a01830;
 
   /* Valiantys/Atlassian Brand Alignment */
   --color-atlassian-blue: #0052CC;
@@ -265,7 +266,7 @@ a {
 }
 
 a:hover {
-  color: #a01830;
+  color: var(--color-red-dark);
 }
 
 a:focus-visible,
@@ -1329,8 +1330,8 @@ button:focus-visible,
 }
 
 .btn--primary:hover {
-  background: #a01830;
-  border-color: #a01830;
+  background: var(--color-red-dark);
+  border-color: var(--color-red-dark);
   color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(196, 30, 58, 0.25);
@@ -2412,6 +2413,59 @@ button:focus-visible,
   .article-hero-glow::after {
     min-width: 730px;
   }
+}
+
+/* ============================================
+   SELECTION COLOUR
+   ============================================ */
+
+::selection {
+  background: rgba(196, 30, 58, 0.3);
+  color: white;
+}
+
+/* ============================================
+   LIGHT SECTION SERVICE CARD CTA VISIBILITY
+   ============================================ */
+
+.section--light .service-card-v2__cta {
+  color: var(--color-red);
+}
+
+.section--light .service-card-v2__cta:hover {
+  color: var(--color-red);
+  opacity: 0.8;
+}
+
+/* ============================================
+   GLASS CARD SECTION TITLE SIZE FIX
+   ============================================ */
+
+.glass-card .section-title {
+  font-size: var(--text-xl);
+}
+
+/* ============================================
+   CENTRED PAGE HERO (for 404 etc.)
+   ============================================ */
+
+.page-hero--centered {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================
+   ABOUT PAGE PORTRAIT
+   ============================================ */
+
+.about-portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(196, 30, 58, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
