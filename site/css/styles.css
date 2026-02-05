@@ -1245,6 +1245,20 @@ button:focus-visible,
   width: 100%;
 }
 
+/* Fully clickable insight cards when wrapped in <a> tags */
+a.insight-card,
+a.insights-carousel__card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a.insight-card:hover,
+a.insights-carousel__card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Stat Card */
 .stat-card {
   background: var(--color-white);
@@ -1874,9 +1888,26 @@ button:focus-visible,
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-8);
+  grid-template-columns: 1.4fr repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-6) var(--space-8);
   margin-bottom: var(--space-8);
+}
+
+/* Explicit footer grid for predictable column layout */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 0.8fr 1fr 0.8fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 .footer__heading {
@@ -2134,7 +2165,7 @@ button:focus-visible,
    ============================================ */
 
 .article {
-  max-width: 720px;
+  max-width: 780px;
   margin: 0 auto;
   padding: var(--space-8) var(--space-4);
 }
@@ -2170,6 +2201,9 @@ button:focus-visible,
   font-weight: var(--weight-semibold);
   color: var(--color-white);
   margin: var(--space-8) 0 var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-red);
+  display: inline-block;
 }
 
 .article__content h3 {
@@ -2263,6 +2297,16 @@ button:focus-visible,
 .article__author-role {
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* Related insights section spacing */
+.article__related {
+  margin-top: var(--space-10);
+}
+
+.article__related-title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
 }
 
 /* ============================================
@@ -2441,8 +2485,10 @@ button:focus-visible,
    GLASS CARD SECTION TITLE SIZE FIX
    ============================================ */
 
-.glass-card .section-title {
-  font-size: var(--text-xl);
+.glass-card .section-title,
+.value-card .section-title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
 }
 
 /* ============================================
@@ -2459,13 +2505,92 @@ button:focus-visible,
    ABOUT PAGE PORTRAIT
    ============================================ */
 
+.about-intro {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.about-portrait-wrap {
+  position: relative;
+}
+
 .about-portrait {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  border: 3px solid rgba(196, 30, 58, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  object-position: center top;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-portrait-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  border: 2px solid rgba(196, 30, 58, 0.2);
+  pointer-events: none;
+}
+
+.about-connect {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-5);
+}
+
+/* At a glance stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+}
+
+.section--light .stat-item {
+  background: var(--color-white);
+  border: 2px solid var(--color-neutral-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-item__number {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 3vw, var(--text-4xl));
+  font-weight: var(--weight-bold);
+  color: var(--color-red);
+  line-height: 1.1;
+  margin-bottom: var(--space-2);
+}
+
+.section--light .stat-item__number {
+  color: var(--color-red);
+}
+
+.stat-item__label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-normal);
 }
 
 /* ============================================

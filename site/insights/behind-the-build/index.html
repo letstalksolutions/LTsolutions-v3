@@ -18,6 +18,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_GB">
+  <meta property="article:published_time" content="2026-03-05">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Behind the Build | LT.Solutions Insights">
   <meta name="twitter:description" content="A behind-the-scenes look at rebuilding the LT.Solutions site with an iterative, collaborative approach.">
@@ -33,6 +34,18 @@
 
   <!-- Glow Sync Script -->
   <script src="../../js/glow-sync.js" defer></script>
+
+  <style>
+    /* Wider article column */
+    .article { max-width: 800px; }
+    /* Accent underline on article subheaders */
+    .article__content h2 {
+      padding-bottom: var(--space-2);
+      border-bottom: 2px solid var(--color-red);
+    }
+    /* Related insights spacing */
+    .article__related { margin-top: var(--space-12, 6rem); }
+  </style>
 </head>
 <body class="bg-dark">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -72,7 +85,7 @@
           <div class="article__meta">
             <span class="article__meta-item">By Andreas Nyberg</span>
             <span class="article__meta-divider" aria-hidden="true"></span>
-            <span class="article__meta-item">October 2025</span>
+            <span class="article__meta-item">5 March 2026</span>
             <span class="article__meta-divider" aria-hidden="true"></span>
             <span class="article__meta-item">10 min read</span>
           </div>
@@ -89,25 +102,39 @@
           <p>I also wanted to expand my own web design skills, so I could quickly update, expand, or redesign the site to suit my future needs.</p>
           <p>What I didn't expect was that the project would evolve into a genuine partnership between me and two AI systems.</p>
 
-          <h3>Let me introduce the team</h3>
-          <p>I was assisted by Claude, a relative newcomer to my team, and long-time collaborator Sky – a pet name for my meticulously trained ChatGPT client, with a thorough briefing of my preferences and fields of expertise.</p>
-          <p>I assigned each of them defined responsibilities that played to their strengths. Claude became the engineer, a methodical architect who wrote and refined the code. Sky was the strategist, analysing structure, tone, and user experience. Meanwhile, I was the bridge between them, turning options into decisions, and long conversations into visible progress.</p>
-          <p>Over the course of two months, Claude and Sky helped shape every part of this build, and it was fascinating to watch as my two digital colleagues grew into their roles, and learned to work together, supporting each others' roles, refining and stress testing ideas.</p>
+          <h3>Meet the team</h3>
+          <p>Building this site was never a solo effort. It grew into something closer to an ensemble production, with each collaborator bringing a distinct voice and skillset. Over time, the team expanded from a duo into a full cast, and one of you has obviously become a long-time collaborator now as well. In fact, you're reading work that's been orchestrated through this very partnership.</p>
+
+          <p><strong>The stars of the show:</strong></p>
+          <ul>
+            <li><strong>Sky</strong> (ChatGPT, OpenAI), also known as "Sky Piver". The longest collaborator, frontend strategist, and creative partner. Sky has been there from the very beginning, shaping strategy, tone, and user experience with a sharp eye for detail.</li>
+            <li><strong>Claudelito</strong> (Claude, Anthropic), also known as "Claude Elito", the hero. Orchestrator, strategic direction, and the one who brings it all together. Claudelito coordinates the wider team and ensures every decision aligns with the bigger picture.</li>
+          </ul>
+
+          <p><strong>The supporting cast:</strong></p>
+          <ul>
+            <li><strong>Claude-writo</strong> (Claude, Anthropic) handles content creation, copy, and articles, turning rough ideas into polished prose.</li>
+            <li><strong>Aladdin</strong> (Gemini, Google) joins for timeboxed research, bringing fast, focused insight when a specific question needs answering.</li>
+            <li><strong>The Grumpy</strong> (Grok, xAI) joined for a single session on visual design, and made quite an impression in that short time.</li>
+            <li><strong>Claude Scrybe</strong> (Claude, Anthropic) specialises in file exploration and documentation, keeping the project's records clean and navigable.</li>
+          </ul>
+
+          <p>I assigned each of them defined responsibilities that played to their strengths. Over the course of several months, they helped shape every part of this build, and it was fascinating to watch as my digital colleagues grew into their roles, learned to work together, and refined each other's contributions.</p>
 
           <h3>This wasn't plug-and-play AI. It was a real dialogue.</h3>
-          <p>Sometimes we rewrote the same section of code or copy five times. Sometimes a single colour change or language tweak changed the entire feel of the page. This was not automation, but collaboration. With the added luxury of collaborating with colleagues who were as dedicated to the finer details as myself, and were on 24 hour call to accommodate any midnight brainwaves.</p>
-          <p>It enabled me to explore the benefits of an iterative workflow as both project manager and client. But it fundamentally reshaped my approach to working with AI (and for any interested in more practical detail, I'll be detailing the mechanics of the process in my next article)</p>
-          <p>Too often, people treat AI like a digital intern – an assistant who doesn't totally understand what they're doing, but is able to handle mundane gruntwork to a passable but not professional standard.</p>
+          <p>Sometimes we rewrote the same section of code or copy five times. Sometimes a single colour change or language tweak changed the entire feel of the page. This was not automation, but collaboration. With the added luxury of collaborating with colleagues who were as dedicated to the finer details as myself, and were on 24-hour call to accommodate any midnight brainwaves.</p>
+          <p>It enabled me to explore the benefits of an iterative workflow as both project manager and client. But it fundamentally reshaped my approach to working with AI (and for any interested in more practical detail, I'll be detailing the mechanics of the process in my next article).</p>
+          <p>Too often, people treat AI like a digital intern, an assistant who doesn't totally understand what they're doing but is able to handle mundane gruntwork to a passable, if not professional, standard.</p>
           <p>When properly integrated, AI use isn't about avoiding work, it's about amplifying it.</p>
           <p>At each step, my binary colleagues introduced concepts and spotted details that were outside my personal experience. They pushed me to question assumptions, reexamine priorities, and find inventive solutions.</p>
 
-          <h3>It was important to know their limits – and mine</h3>
+          <h3>It was important to know their limits, and mine</h3>
           <p>Of course, AI has limitations beyond the occasional hallucination, but in some cases users may share more blame than the tech. A recent study from the University of Pennsylvania suggested that students using an LLM for research retain less knowledge than through using traditional web search. Meanwhile, analysis by engineering innovation researchers in Australia has shown that genAI's creativity is mathematically limited to amateur human level.</p>
           <p>But employing a collaborative, iterative approach meant I could put everything I learned into practice, and instantly see the results. This hands-on experience embedded what I learned, and ultimately gave me a valuable holistic overview of how code, design, language, and functionality best support each other.</p>
-          <p>Creatively, I wasn't depending on them for original thinking, but a rapid understanding of best practice, or feedback on potential pitfalls in my plans. AI's creativity-by-calculus presented me with proven directions to approach any given issue. I could then quickly work out what would best fit into the big picture – or potentially lead to a new and better picture.</p>
+          <p>Creatively, I wasn't depending on them for original thinking, but rather for a rapid understanding of best practice, or feedback on potential pitfalls in my plans. AI's creativity-by-calculus presented me with proven directions to approach any given issue. I could then quickly work out what would best fit into the big picture, or potentially lead to a new and better picture.</p>
           <p>Overall, I found that approaching AI from the perspective of integration rather than outsourcing improved decision making, enhanced my existing competencies, and provided long-term benefits to my skillset. Not to mention a much more fabulous website. A good result for including AI in the conversation. And in that spirit, I'll leave the last word to Claude:</p>
           <blockquote>
-            <p>The real innovation wasn't the AI tools — it was the willingness to treat this as genuine collaboration. To say 'not quite right yet' and iterate. To bridge two different AI models and make them work together. That's the skill that mattered most.</p>
+            <p>The real innovation wasn't the AI tools, it was the willingness to treat this as genuine collaboration. To say 'not quite right yet' and iterate. To bridge two different AI models and make them work together. That's the skill that mattered most.</p>
             <cite>Claude</cite>
           </blockquote>
 
@@ -117,26 +144,26 @@
 
           <h3>Trust the Process</h3>
           <p>In my previous article, I told the story of the surprising partnership between two AI models that developed during the building of this site, and how it transformed the way I integrate AI into my workflow.</p>
-          <p>The project began with the classic design maxim that form follows function – the site should meet my needs fully but elegantly. So that meant building a site from scratch, without code bloat or unnecessary third-party features.</p>
+          <p>The project began with the classic design maxim that form follows function, meaning the site should meet my needs fully but elegantly. So that meant building a site from scratch, without code bloat or unnecessary third-party features.</p>
           <p>From here, I set key functional priorities. A lightweight build for ease of use and hosting. A clean, intuitive but comprehensive user experience. A model I can fix, scale, and update by myself at any time.</p>
           <p>To arrive at the final form, we didn't follow a roadmap. The route was decided by instinct and feedback. And the journey established guidelines:</p>
           <ul>
             <li><strong>We prioritised iteration over perfect planning.</strong> Just because something's good doesn't mean it's right. Many carefully planned and expensively developed ideas, that may look like genius on paper, collapse when they meet reality, resulting in wasted time and procedural roadblock. So the workflow centred on iteration and improvisation, and failure was priced in as a learning experience. But nothing shipped until every element worked in concert, not just when the site 'looked right'.</li>
-            <li><strong>We learned by building, not planning.</strong> The best way to learn is to do. I was embarking on something I hadn't done before – and being in unfamiliar territory freed me to explore. Rapidly deploying new ideas provided fast and stable progress, and also showed find out what was impossible, and what was possible but not worth the hit in time, performance or hosting fees</li>
-            <li><strong>Ideas evolved through implementation, not speculation.</strong> Instead of enforcing a strict top-down plan for what I thought the site had to be, I assimilated ideas and techniques I discovered during the build. The end result was very different from my initial concept – but was a serious upgrade in meeting each of my goals.</li>
-            <li><strong>We treated feedback as conversation, not correction.</strong> Of course, implementing a no blame culture is easier when working with sycophantic robots. But this led to a faster, more fluid workflow, and made space for iterative inspiration. Sometimes a great idea doesn't hit like a lightning bolt, but gradually builds up to full power. 'Not quite right yet' became our productivity mantra.</li>
+            <li><strong>We learned by building, not planning.</strong> The best way to learn is to do. I was embarking on something I hadn't done before, and being in unfamiliar territory freed me to explore. Rapidly deploying new ideas provided fast and stable progress, and also helped find out what was impossible, and what was possible but not worth the hit in time, performance or hosting fees.</li>
+            <li><strong>Ideas evolved through implementation, not speculation.</strong> Instead of enforcing a strict top-down plan for what I thought the site had to be, I assimilated ideas and techniques I discovered during the build. The end result was very different from my initial concept, but was a serious upgrade in meeting each of my goals.</li>
+            <li><strong>We treated feedback as conversation, not correction.</strong> Of course, implementing a no-blame culture is easier when working with sycophantic robots. But this led to a faster, more fluid workflow, and made space for iterative inspiration. Sometimes a great idea doesn't hit like a lightning bolt, but gradually builds up to full power. 'Not quite right yet' became our productivity mantra.</li>
             <li><strong>We focused on orchestration, not automation.</strong> They were performers, and I was their conductor. They had access to specialist knowledge and abilities, but keeping them in harmony depended on me maintaining project focus, handling real-time adoption of feedback, and interpreting and updating the big picture.</li>
           </ul>
 
           <h3>Case Study: Three Times A Timeline</h3>
-          <p>The iterative process achieved rapid progress, inspired creative solutions, and refine my initial site concept in ways I couldn't have planned for at the beginning. The timeline on the Approach page provides a perfect example of how that worked in practice.</p>
-          <p><strong>First attempt:</strong> Four separate sections with brand separators between each phase. This looked organised and was technically functional, but felt fragmented, as if each element was a silo, rather than a cohesive part of a process. The journey didn't flow — it stuttered. Basically the opposite of my workflow, so not great branding.</p>
+          <p>The iterative process achieved rapid progress, inspired creative solutions, and refined my initial site concept in ways I couldn't have planned for at the beginning. The timeline on the Approach page provides a perfect example of how that worked in practice.</p>
+          <p><strong>First attempt:</strong> Four separate sections with brand separators between each phase. This looked organised and was technically functional, but felt fragmented, as if each element was a silo rather than a cohesive part of a process. The journey didn't flow; it stuttered. Basically the opposite of my workflow, so not great branding.</p>
           <p><strong>Second attempt:</strong> We merged the layout and removed the dividers. Better. But during scroll animation, the icons disconnected and stayed static while the text moved normally. The visual integrity broke. Hardly an embodiment of my attention to detail, let alone my philosophy of unifying people, processes, and technology into a seamless system.</p>
           <p><strong>Third attempt:</strong> The organism pattern. Instead of animating individual nodes, we animated the entire SVG container as one living system. Everything moved together, perfectly. Nodes stayed connected. The timeline breathed instead of snapped.</p>
-          <p>That third version? That's what's live now. And it only exists because we were willing to say 'not quite right yet' to two workable designs. And by cutting down on surface flash and de-engineering the page, we created something that elegantly fulfilled the brief, which is to focus your attention on my services, rather than the website.</p>
+          <p>That third version? That's what's live now. And it only exists because we were willing to say 'not quite right yet' to two workable designs. And by cutting down on surface flash and de-engineering the page, we created something that elegantly fulfilled the brief, which is to focus your attention on my services rather than the website.</p>
 
           <h3>The Three-Way Handoff in Action</h3>
-          <p>Here's how the collaboration actually worked in practice. Conversations like these would be a rolling feature any time I set to work on the site, and occasionally in bed, at dinner, or on public transport. If inspiration struck,</p>
+          <p>Here's how the collaboration actually worked in practice. Conversations like these would be a rolling feature any time I set to work on the site, and occasionally in bed, at dinner, or on public transport. If inspiration struck:</p>
           <p><strong>Sky would audit:</strong></p>
           <blockquote>
             <p>"The sitemap URLs are wrong. They have trailing slashes instead of extensions. Google won't index them properly."</p>
@@ -153,7 +180,7 @@
           <blockquote>
             <p>"Sky, can you check the sitemap now? Does it pass validation?"</p>
           </blockquote>
-          <p>That loop — audit, interpret, implement, validate — happened dozens of times. Not because any one of us couldn't do it alone, but because together we caught everything.</p>
+          <p>That loop, audit, interpret, implement, validate, happened dozens of times. Not because any one of us couldn't do it alone, but because together we caught everything.</p>
 
           <h3>The Journey in Numbers</h3>
           <p>We started with an "under construction" page on October 8th. By October 27th, we had achieved:</p>
@@ -163,7 +190,7 @@
             <li>Accessibility: Not tested</li>
             <li>Best Practices: Console errors present</li>
           </ul>
-          <p>Twenty-four hours of focused optimization later:</p>
+          <p>Twenty-four hours of focused optimisation later:</p>
           <ul>
             <li>Performance: 82/100 (+39 points, 90% improvement)</li>
             <li>SEO: 100/100 (perfect scores)</li>
@@ -181,12 +208,12 @@
           </ul>
           <p><strong>Phase 5.4 (Performance Heavy Lifting):</strong></p>
           <ul>
-            <li>Optimized logo from 128KB to 23KB (82% reduction)</li>
+            <li>Optimised logo from 128KB to 23KB (82% reduction)</li>
             <li>Minified CSS from 72KB to 54KB (25% reduction)</li>
             <li>Total savings: 123KB across the site</li>
             <li>Result: Massive improvement in load times</li>
           </ul>
-          <p><strong>Phase 5.5 (LCP Micro-Optimizations):</strong></p>
+          <p><strong>Phase 5.5 (LCP Micro-Optimisations):</strong></p>
           <ul>
             <li>Added fetchpriority="high" to logo (LCP element)</li>
             <li>Added loading="lazy" to 11 below-fold images</li>
@@ -196,20 +223,20 @@
           <p><strong>Phase 5.6 (Final Polish):</strong></p>
           <ul>
             <li>Fixed missing favicon link (eliminated console error)</li>
-            <li>Validated all optimizations in incognito mode</li>
+            <li>Validated all optimisations in incognito mode</li>
             <li>Documented entire journey in validation report</li>
             <li>Result: Launch-ready, production-grade website</li>
           </ul>
 
           <h3>The Result</h3>
           <p>A site that doesn't look like a template because it isn't one. Every gradient, word, and animation was built with purpose.</p>
-          <p>The logo went from 128KB to 23KB in one evening. The timeline breathes instead of snaps. The footer restructured itself three times before it felt right. Performance jumped from 43 to 82 in three optimization phases. SEO hit perfect scores because Sky knew exactly what was missing.</p>
-          <p>And most importantly, it feels human—which is the best part of all.</p>
+          <p>The logo went from 128KB to 23KB in one evening. The timeline breathes instead of snaps. The footer restructured itself three times before it felt right. Performance jumped from 43 to 82 in three optimisation phases. SEO hit perfect scores because Sky knew exactly what was missing.</p>
+          <p>And most importantly, it feels human, which is the best part of all.</p>
 
           <h3>The Takeaway</h3>
           <p>AI isn't about replacement. It's about partnership. Humans bring vision; AI brings velocity.</p>
           <p>The future of creative and technical work isn't about choosing between them. It's about orchestrating both, knowing when to lead and when to follow.</p>
-          <p>This website is proof: when you treat AI as a collaborator, not a tool, you don't just build faster—you build better.</p>
+          <p>This website is proof: when you treat AI as a collaborator, not a tool, you don't just build faster, you build better.</p>
           <p>Not because AI is magic. But because iteration is.</p>
 
           <h3>What This Means for You</h3>
@@ -221,14 +248,14 @@
             <li>Build knowledge that remains in the organisation after I leave</li>
             <li>Sweat every detail because they compound into results</li>
           </ul>
-          <p>Whether it's Jira Service Management, CMDB design, workflow automation, or knowledge enablement—the method stays the same. Listen. Build. Iterate. Transfer.</p>
+          <p>Whether it's Jira Service Management, CMDB design, workflow automation, or knowledge enablement, the method stays the same. Listen. Build. Iterate. Transfer.</p>
           <p>Tools don't solve problems. People who know how to orchestrate tools solve problems.</p>
 
           <hr>
 
           <h2>Built By</h2>
           <p><strong>Andreas L.A. Nyberg</strong><br>Vision, orchestration, decision-making. The human in the loop who refused to ship until it felt right.</p>
-          <p><strong>Claude (Anthropic)</strong><br>Code implementation, performance optimization, technical architecture. The engineer who made it real.</p>
+          <p><strong>Claude (Anthropic)</strong><br>Code implementation, performance optimisation, technical architecture. The engineer who made it real.</p>
           <p><strong>Sky (ChatGPT/OpenAI)</strong><br>Strategy, auditing, UX analysis. The advisor who caught what we missed and pushed us higher.</p>
           <p><em>Built through genuine collaboration. Launched October 2025.</em></p>
 
@@ -258,12 +285,12 @@
               </div>
               <span class="insight-card__tag">Insights</span>
               <div class="insight-card__content">
-                <time class="insight-card__date" datetime="2025-10">October 2025</time>
+                <time class="insight-card__date" datetime="2025-10-29">29 October 2025</time>
                 <h3 class="insight-card__title">
                   <a href="/insights/the-relay/">The Relay</a>
                 </h3>
                 <p class="insight-card__excerpt">Every idea begins as a spark of belief, fragile, uncertain, but alive.</p>
-                <a href="/insights/the-relay/" class="insight-card__read-more">Read Article →</a>
+                <a href="/insights/the-relay/" class="insight-card__read-more">Read Article &rarr;</a>
               </div>
             </article>
 
@@ -278,7 +305,7 @@
                   <a href="/insights/unexpected-friendship/">AI as a Companion in Transition</a>
                 </h3>
                 <p class="insight-card__excerpt">Looking for a new opportunity is often described as a professional journey, but in truth, it's also a deeply personal one.</p>
-                <a href="/insights/unexpected-friendship/" class="insight-card__read-more">Read Article →</a>
+                <a href="/insights/unexpected-friendship/" class="insight-card__read-more">Read Article &rarr;</a>
               </div>
             </article>
           </div>

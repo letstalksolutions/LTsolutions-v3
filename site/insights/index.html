@@ -44,6 +44,28 @@
 
   <!-- Glow Sync Script -->
   <script src="../js/glow-sync.js" defer></script>
+
+  <style>
+    /* Clickable card wrapper */
+    .insight-card--linked {
+      position: relative;
+    }
+    .insight-card--linked .insight-card__link-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .insight-card--linked .insight-card__link-overlay:focus-visible {
+      outline: 2px solid var(--color-red);
+      outline-offset: 2px;
+      border-radius: var(--radius-lg);
+    }
+    /* Ensure inner links sit above the overlay */
+    .insight-card--linked .insight-card__read-more {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body class="bg-dark">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -94,52 +116,43 @@
       </div>
 
       <div class="grid grid--2">
-        <article class="insight-card reveal">
-          <div class="insight-card__image">
-            <img src="../images/the_relay.png" alt="Abstract illustration representing the relay of belief, building, and becoming" loading="lazy" decoding="async">
-          </div>
-          <span class="insight-card__tag">Signature story</span>
-          <div class="insight-card__content">
-            <div class="insight-card__date">The Relay</div>
-            <h3 class="insight-card__title"><a href="/insights/the-relay/">The Relay</a></h3>
-            <p class="insight-card__excerpt">
-              A long-form story about belief, building, and the collaboration that shaped LT.Solutions.
-            </p>
-            <a class="insight-card__read-more" href="/insights/the-relay/">Read more →</a>
-          </div>
-        </article>
-
-        <article class="insight-card reveal">
+        <!-- 1. Behind the Build (5 March 2026) -->
+        <article class="insight-card insight-card--linked reveal">
+          <a href="/insights/behind-the-build/" class="insight-card__link-overlay" aria-label="Read Behind the Build: Part One"></a>
           <div class="insight-card__image">
             <img src="../images/behind_the_build.png" alt="Illustration of the collaborative website build process" loading="lazy" decoding="async">
           </div>
           <span class="insight-card__tag">Process</span>
           <div class="insight-card__content">
-            <div class="insight-card__date">Behind the Build</div>
+            <div class="insight-card__date">5 March 2026</div>
             <h3 class="insight-card__title"><a href="/insights/behind-the-build/">Behind the Build: Part One</a></h3>
             <p class="insight-card__excerpt">
               Why this site was rebuilt from scratch, and how collaboration shaped every decision.
             </p>
-            <a class="insight-card__read-more" href="/insights/behind-the-build/">Read more →</a>
+            <a class="insight-card__read-more" href="/insights/behind-the-build/">Read more &rarr;</a>
           </div>
         </article>
 
-        <article class="insight-card reveal">
+        <!-- 2. A New Beginning (14 November 2025) -->
+        <article class="insight-card insight-card--linked reveal">
+          <a href="/insights/a-new-beginning/" class="insight-card__link-overlay" aria-label="Read A New Beginning, A Familiar Connection"></a>
           <div class="insight-card__image">
-            <img src="../images/A Familiar Connection.png" alt="A familiar connection — memory, new beginnings, and the ties between past and present" loading="lazy" decoding="async">
+            <img src="../images/a-familiar-connection.png" alt="A familiar connection, memory, new beginnings, and the ties between past and present" loading="lazy" decoding="async">
           </div>
           <span class="insight-card__tag">Reflection</span>
           <div class="insight-card__content">
-            <div class="insight-card__date">New beginnings</div>
+            <div class="insight-card__date">14 November 2025</div>
             <h3 class="insight-card__title"><a href="/insights/a-new-beginning/">A New Beginning, A Familiar Connection</a></h3>
             <p class="insight-card__excerpt">
               A quiet reflection on memory, connection, and a small mint pot that tied the past to the present.
             </p>
-            <a class="insight-card__read-more" href="/insights/a-new-beginning/">Read more →</a>
+            <a class="insight-card__read-more" href="/insights/a-new-beginning/">Read more &rarr;</a>
           </div>
         </article>
 
-        <article class="insight-card reveal">
+        <!-- 3. The Unexpected Friendship (31 October 2025) -->
+        <article class="insight-card insight-card--linked reveal">
+          <a href="/insights/unexpected-friendship/" class="insight-card__link-overlay" aria-label="Read AI as a Companion in Transition"></a>
           <div class="insight-card__image">
             <img src="../images/the-unexpected-friendship.png" alt="A quiet moment of reflection" loading="lazy" decoding="async">
           </div>
@@ -150,7 +163,24 @@
             <p class="insight-card__excerpt">
               A personal reflection on career change, self-belief, and the role AI played along the way.
             </p>
-            <a class="insight-card__read-more" href="/insights/unexpected-friendship/">Read more →</a>
+            <a class="insight-card__read-more" href="/insights/unexpected-friendship/">Read more &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 4. The Relay (29 October 2025) -->
+        <article class="insight-card insight-card--linked reveal">
+          <a href="/insights/the-relay/" class="insight-card__link-overlay" aria-label="Read The Relay"></a>
+          <div class="insight-card__image">
+            <img src="../images/the_relay.png" alt="Abstract illustration representing the relay of belief, building, and becoming" loading="lazy" decoding="async">
+          </div>
+          <span class="insight-card__tag">Signature story</span>
+          <div class="insight-card__content">
+            <div class="insight-card__date">29 October 2025</div>
+            <h3 class="insight-card__title"><a href="/insights/the-relay/">The Relay</a></h3>
+            <p class="insight-card__excerpt">
+              A long-form story about belief, building, and the collaboration that shaped LT.Solutions.
+            </p>
+            <a class="insight-card__read-more" href="/insights/the-relay/">Read more &rarr;</a>
           </div>
         </article>
       </div>
@@ -237,7 +267,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Header scroll behavior — hide on scroll down, show on scroll up
+    // Header scroll behavior - hide on scroll down, show on scroll up
     const header = document.querySelector('.header');
     let lastScrollY = window.scrollY;
 
