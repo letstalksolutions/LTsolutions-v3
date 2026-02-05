@@ -8,6 +8,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://lt.solutions/contact/">
@@ -45,6 +46,7 @@
   <script src="../js/glow-sync.js" defer></script>
 </head>
 <body class="bg-dark">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
   <header class="header" role="banner">
@@ -73,7 +75,7 @@
   </header>
 
   <!-- Page Hero -->
-  <section class="page-hero page-hero--red">
+  <section class="page-hero page-hero--red" id="main-content">
     <div class="container">
       <h1 class="page-hero__title">Book a short call</h1>
       <p class="page-hero__subtitle">
@@ -97,17 +99,17 @@
         <form class="contact-form reveal" action="https://formspree.io/f/xwpkjzqr" method="POST">
           <div class="form-group">
             <label class="form-label" for="name">Name</label>
-            <input class="form-input" type="text" id="name" name="name" required>
+            <input class="form-input" type="text" id="name" name="name" required autocomplete="name">
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" required>
+            <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
           </div>
 
           <div class="form-group">
             <label class="form-label" for="company">Company (optional)</label>
-            <input class="form-input" type="text" id="company" name="company">
+            <input class="form-input" type="text" id="company" name="company" autocomplete="organization">
           </div>
 
           <div class="form-group">

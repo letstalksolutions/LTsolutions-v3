@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found - LT.Solutions">
+  <title>Page Not Found | LT.Solutions</title>
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="canonical" href="https://lt.solutions/404/">
+
+  <meta property="og:title" content="Page Not Found | LT.Solutions">
+  <meta property="og:description" content="The page you're looking for doesn't exist.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lt.solutions/404/">
+  <meta property="og:image" content="https://lt.solutions/images/og/default.jpg">
+  <meta property="og:locale" content="en_GB">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav__logo" aria-label="LT.Solutions home">
+          <img src="/images/logo-footer.svg" alt="LT.Solutions - Atlassian consultancy" height="48" fetchpriority="high" decoding="async">
+        </a>
+
+        <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+
+        <ul class="nav__menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/services/" class="nav__link">Services</a></li>
+          <li><a href="/approach/" class="nav__link">Our Approach</a></li>
+          <li><a href="/insights/" class="nav__link">Insights</a></li>
+          <li><a href="/about/" class="nav__link">About</a></li>
+          <li><a href="/contact/" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section section--dark page-hero page-hero--red" id="main-content" style="min-height: 60vh; display: flex; align-items: center;">
+    <div class="container text-center">
+      <span class="section-tag">404</span>
+      <h1 class="page-hero__title">Page not found</h1>
+      <p class="page-hero__subtitle">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <div class="hero__cta mt-8">
+        <a href="/" class="btn--hero-primary">Back to home</a>
+        <a href="/contact/" class="hero-link-secondary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/images/logo-footer.svg" alt="LT.Solutions logo" class="footer__logo" loading="lazy" decoding="async">
+          <p class="footer__summary">
+            Hands-on Atlassian expertise that modernises workflows and builds knowledge that stays.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Company</h3>
+          <ul class="footer__list">
+            <li><a href="/about/" class="footer__link">About LT.Solutions</a></li>
+            <li><a href="/services/" class="footer__link">Services</a></li>
+            <li><a href="/approach/" class="footer__link">Our Approach</a></li>
+            <li><a href="/insights/" class="footer__link">Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Connect</h3>
+          <ul class="footer__list">
+            <li><a href="/contact/" class="footer__link">Contact Us</a></li>
+            <li><a href="mailto:hello@lt.solutions" class="footer__link">hello@lt.solutions</a></li>
+            <li><a href="https://www.linkedin.com/in/andreas-l-a-nyberg/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Legal</h3>
+          <ul class="footer__list">
+            <li><a href="/privacy/" class="footer__link">Privacy Policy</a></li>
+            <li><a href="/legal/" class="footer__link">Legal Notice</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer__copyright">
+          &copy; 2026 LT.Solutions. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.querySelector('.nav__menu');
+
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navMenu.classList.contains('nav__menu--open');
+      navMenu.classList.toggle('nav__menu--open');
+      navToggle.setAttribute('aria-expanded', !isOpen);
+    });
+
+    navMenu?.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('nav__menu--open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
