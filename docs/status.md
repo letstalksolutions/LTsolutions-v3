@@ -1,6 +1,6 @@
 # LT.solutions rebuild status
 
-Updated: 2026-01-30
+Updated: 2026-02-04
 
 ## Current Phase: PRE-LAUNCH QA
 
@@ -23,71 +23,47 @@ Updated: 2026-01-30
 
 ---
 
-## Completed
+## Session Progress (2026-02-04)
 
-### Infrastructure
-- Git repository initialized
-- Folder structure established (site/, docs/, agents/, lab/, archive/)
-- Design system complete (1800+ lines CSS)
-- All agent init files updated with current context
+### Completed This Session
+- ✅ **Service Pillar CTAs** - Replaced gradient pill buttons with text links + arrow
+- ✅ **Approach Section** - Replaced glass card grid with timeline component (dots, connecting line, "01/02/03/04" numbering)
+- ✅ **Section Footer CTAs** - Changed to text links with arrows (Services, Approach sections)
+- ✅ **Homepage Glow Fixed** - Changed from wide circle to narrow ellipse (40% 30%) so rotating rectangle is visible
+- ✅ **Approach Text Bug** - Fixed white-on-white text (link styling was overriding colors)
+- ✅ **Link Arrow Utility** - Created `.link-arrow` class for text link CTAs
 
-### Content & Pages
-- Positioning spine locked (docs/positioning/primary-offer.md)
-- Homepage brief and copy blocks
-- All 12 pages built:
-  - Homepage (site/index.html)
-  - Services (site/services/index.html)
-  - Approach (site/approach/index.html)
-  - About (site/about/index.html)
-  - Contact (site/contact/index.html)
-  - Insights listing (site/insights/index.html)
-  - 4 article pages (the-relay, behind-the-build, a-new-beginning, unexpected-friendship)
-  - Privacy (site/privacy/index.html)
-  - Legal (site/legal/index.html)
-- Sitemap.xml, robots.txt, CNAME
+### In Progress
+- ⏸️ **Hero CTAs** - First implementation rejected ("not nice"). New concepts proposed, awaiting decision.
 
-### Design & Assets
-- Design review completed (P0/P1 issues fixed)
-- Assets migrated from old site:
-  - Author headshots (Andreas.png, andreas.jpeg)
-  - Article images (bench+image.png, mint-seed-pot.jpg, will-kew-bench.jpg, the-unexpected-friendship.png)
-  - Value icons (value-clarity.svg, etc.)
-  - Phase icons (discovery, mapping, implementation, delivery)
-  - OG images
-- CMDB icons created (lab/cmdb-icons/)
+### New Files Created
+- `docs/reviews/design-review-index-ctas.md` - CTA design recommendations
+- `docs/reviews/design-review-hero-redesign.md` - Hero redesign concepts (CTAs + glow)
+- `docs/sessions/2026-02-04-session-handover.md` - Session handover notes
 
 ---
 
-## Session Progress (2026-01-30)
+## Pending Decision: Hero CTAs
 
-### Completed This Session
-- ✅ Article hero images wired (mint-seed-pot, will-kew-bench, the-unexpected-friendship, bench+image)
-- ✅ OG images connected for all 4 articles
-- ✅ Author headshots replaced (was "AN" placeholder → andreas.jpeg)
-- ✅ Sitemap validated (all 12 pages correct)
-- ✅ Images folder reorganised (`/media/` → `/images/`)
-- ✅ **Animated glows on ALL 12 pages** (was homepage only)
-- ✅ Colour-coded glows per page (blue/green/amber/red/indigo/neutral)
-- ✅ Glow sync via UNIX timestamp (`/site/js/glow-sync.js`)
-- ✅ Undertone depth layer (secondary glow, reverse rotation)
+Three concepts proposed in `docs/reviews/design-review-hero-redesign.md`:
 
-### New Files Created
-- `/site/js/glow-sync.js` - Synchronises glow rotation across all pages
+| Concept | Primary CTA | Secondary CTA |
+|---------|-------------|---------------|
+| **A (Recommended)** | White button (#f0f0f2), dark text | Text link with arrow |
+| **B** | Single white button | None |
+| **C** | Transparent pill, white border | Text link with arrow |
 
-### CSS Additions
-- `.page-hero::before` / `::after` - Animated glow + undertone
-- `.article-hero-glow::before` / `::after` - Article page glows
-- Colour variants: `--blue`, `--green`, `--amber`, `--red`, `--soft-blue`, `--indigo`, `--neutral`
+**Action:** Choose concept, then implement
 
 ---
 
 ## Remaining to Launch
 
 ### Priority 1 - Fix Before Deploy
-1. **Homepage glow too wide** - Needs tighter focus like inner pages
-2. **Homepage colour shift** - Consider non-red colour for variety
+1. ~~**Homepage glow too wide**~~ ✅ FIXED - Now narrow ellipse
+2. **Hero CTAs** - Implement chosen concept (A, B, or C)
 3. **White cards** - Too stark against dark backgrounds, need warmth/depth
-4. **CTA buttons** - Static state looks off (hover is fine)
+4. **Final CTA section** - Match hero treatment once decided
 
 ### Priority 2 - Polish
 5. **Mobile glow breakpoint** - Don't shrink glow below 730px
@@ -96,6 +72,30 @@ Updated: 2026-01-30
 
 ### Priority 3 - Deploy
 8. **GitHub Pages** - Push to main, verify DNS
+
+---
+
+## Completed (Previous Sessions)
+
+### Infrastructure
+- Git repository initialized
+- Folder structure established (site/, docs/, agents/, lab/, archive/)
+- Design system complete (2000+ lines CSS)
+- All agent init files updated with current context
+
+### Content & Pages
+- Positioning spine locked (docs/positioning/primary-offer.md)
+- Homepage brief and copy blocks
+- All 12 pages built
+- Sitemap.xml, robots.txt, CNAME
+
+### Design & Assets
+- Design review completed (P0/P1 issues fixed)
+- Assets migrated from old site
+- CMDB icons created (lab/cmdb-icons/)
+- Animated glows on ALL 12 pages
+- Colour-coded glows per page (blue/green/amber/red/indigo/neutral)
+- Glow sync via UNIX timestamp (`/site/js/glow-sync.js`)
 
 ---
 
@@ -110,49 +110,26 @@ Watch for updates in next sessions.
 
 ---
 
-## Reference Screenshots (in `/site/` and `/site/insights/`)
-
-| File | Shows |
-|------|-------|
-| `current-view.png` | Homepage glow too wide |
-| `wwhats_wrong.png` | White cards on Services flat |
-| `whhats_wrong2.png` | Approach cards lack depth |
-| `whats_wrong3.png` | About page white cards |
-| `this_looks_great.png` | Good inner page glow example |
-| `mockup_what_we_should_have.png` | Target design direction |
-
----
-
 ## Site Structure
 
 ```
 site/
 ├── index.html              # Homepage
-├── css/styles.css          # Design system (1800+ lines)
+├── css/styles.css          # Design system (2000+ lines)
+├── js/glow-sync.js         # Glow animation sync
 ├── images/                 # All assets
-│   ├── Andreas.png         # Author headshot (large)
-│   ├── andreas.jpeg        # Author headshot (optimized)
-│   ├── logo-footer.svg     # Main logo
-│   ├── favicon.svg         # Tab icon
-│   ├── bench+image.png     # Article image
-│   ├── mint-seed-pot.jpg   # Article image
-│   ├── will-kew-bench.jpg  # Article image
-│   ├── the-unexpected-friendship.png  # Article image
-│   ├── value-*.svg         # Value icons
-│   ├── og/                 # Open Graph images
-│   └── ...
 ├── services/index.html     # Services overview
 ├── approach/index.html     # 4-phase methodology
 ├── about/index.html        # About Andreas/LT
 ├── contact/index.html      # Contact form
 ├── insights/
 │   ├── index.html          # Articles listing
-│   ├── the-relay/index.html
-│   ├── behind-the-build/index.html
-│   ├── a-new-beginning/index.html
-│   └── unexpected-friendship/index.html
-├── privacy/index.html      # Privacy policy
-├── legal/index.html        # Legal notice
+│   ├── the-relay/
+│   ├── behind-the-build/
+│   ├── a-new-beginning/
+│   └── unexpected-friendship/
+├── privacy/index.html
+├── legal/index.html
 ├── sitemap.xml
 ├── robots.txt
 └── CNAME                   # lt.solutions

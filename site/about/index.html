@@ -32,7 +32,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Preload Critical Resources -->
-  <link rel="preload" href="../images/logo-full.png" as="image" type="image/png">
   <link rel="preload" href="../css/styles.css" as="style">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" as="style">
 
@@ -87,73 +86,6 @@
     </div>
   </section>
 
-  <!-- About Andreas -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="about-intro">
-        <div class="about-portrait-wrap reveal">
-          <img src="../images/andreas.jpeg" alt="Andreas Nyberg, founder of LT.Solutions" class="about-portrait" loading="lazy">
-          <div class="about-connect">
-            <a href="https://www.linkedin.com/in/andreas-l-a-nyberg/" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">LinkedIn</a>
-            <a href="mailto:hello@lt.solutions" class="btn btn--secondary btn--sm">Email</a>
-          </div>
-        </div>
-
-        <div class="reveal">
-          <span class="section-tag" style="margin-bottom: var(--space-3); display: inline-block;">About Andreas</span>
-          <h2 class="section-title" style="text-align: left;">Hands-on Atlassian delivery</h2>
-          <p style="color: var(--color-neutral-700); font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-            I'm Andreas Nyberg, an Atlassian consultant and ITSM specialist with more than 15 years of experience in workflow automation, tooling strategy, and service management transformation.
-          </p>
-          <p style="color: var(--color-neutral-700); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-            I've supported global rollouts spanning 4,000 to 5,000 seats across multiple regions, working with organisations where the challenge is never just the tooling but how teams adopt, own, and sustain it. My specialism is the Atlassian service stack: Jira Service Management, Assets (CMDB), and Opsgenie.
-          </p>
-          <p style="color: var(--color-neutral-700); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">
-            More than configuration, my focus is the human side of transformation: understanding how teams actually work, identifying which processes need to change, and building knowledge that stays long after the engagement ends. I believe in orchestration over automation. Tools don't solve problems; people who know how to orchestrate tools solve problems.
-          </p>
-          <p style="color: var(--color-neutral-700); line-height: var(--leading-relaxed);">
-            That philosophy shapes everything I do. If I can leave your team more capable and more confident than when I arrived, the engagement has succeeded. If you still need me afterwards, something went wrong.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Philosophy -->
-  <section class="section section--dark">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Philosophy</span>
-        <h2 class="section-title">What I believe</h2>
-        <p class="section-subtitle">
-          Four principles that shape every engagement, from discovery through to handover.
-        </p>
-      </div>
-
-      <div class="grid grid--2" style="gap: var(--space-8);">
-        <div class="glass-card reveal">
-          <h3 class="phase-card__title">Orchestration over automation</h3>
-          <p class="glass-card__text">The value is never in the tool itself, it is in knowing how to use it well. Automation without understanding creates fragile systems. Orchestration creates sustainable ones.</p>
-        </div>
-
-        <div class="glass-card reveal">
-          <h3 class="phase-card__title">Knowledge transfer as success</h3>
-          <p class="glass-card__text">A consultant who leaves you dependent has failed. Every engagement should end with your team able to maintain, extend, and troubleshoot without outside help.</p>
-        </div>
-
-        <div class="glass-card reveal">
-          <h3 class="phase-card__title">Iteration over perfection</h3>
-          <p class="glass-card__text">"Not quite right yet" is a feature, not a bug. Building iteratively means catching issues early and adapting to what actually works in your context.</p>
-        </div>
-
-        <div class="glass-card reveal">
-          <h3 class="phase-card__title">Honest assessment</h3>
-          <p class="glass-card__text">Not every problem needs a consultant. If your challenge is better solved internally or with a different approach, I will tell you. Trust is built on honesty, not on selling hours.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Company Info -->
   <section class="section section--light">
     <div class="container">
@@ -165,7 +97,7 @@
         </p>
       </div>
 
-      <div class="stats-grid" style="margin-bottom: var(--space-12);">
+      <div class="stats-grid mb-12">
         <div class="stat-item reveal">
           <div class="stat-item__number">15+</div>
           <div class="stat-item__label">Years in workflow automation and ITSM</div>
@@ -224,17 +156,86 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- Philosophy -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Philosophy</span>
+        <h2 class="section-title">What I believe</h2>
+        <p class="section-subtitle">
+          Four principles that shape every engagement, from discovery through to handover.
+        </p>
+      </div>
+
+      <div class="grid grid--2 gap-8">
+        <div class="glass-card reveal">
+          <h3 class="phase-card__title">Orchestration over automation</h3>
+          <p class="glass-card__text">The value is never in the tool itself, it is in knowing how to use it well. Automation without understanding creates fragile systems. Orchestration creates sustainable ones.</p>
+        </div>
+
+        <div class="glass-card reveal">
+          <h3 class="phase-card__title">Knowledge transfer as success</h3>
+          <p class="glass-card__text">A consultant who leaves you dependent has failed. Every engagement should end with your team able to maintain, extend, and troubleshoot without outside help.</p>
+        </div>
+
+        <div class="glass-card reveal">
+          <h3 class="phase-card__title">Iteration over perfection</h3>
+          <p class="glass-card__text">"Not quite right yet" is a feature, not a bug. Building iteratively means catching issues early and adapting to what actually works in your context.</p>
+        </div>
+
+        <div class="glass-card reveal">
+          <h3 class="phase-card__title">Honest assessment</h3>
+          <p class="glass-card__text">Not every problem needs a consultant. If your challenge is better solved internally or with a different approach, I will tell you. Trust is built on honesty, not on selling hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Andreas -->
   <section class="section section--dark">
+    <div class="container">
+      <div class="about-intro reveal">
+        <span class="section-tag">About Andreas</span>
+        <h2 class="about-intro__heading">Hands-on Atlassian delivery</h2>
+
+        <div class="about-intro__body">
+          <div class="about-portrait-wrap">
+            <img src="../images/andreas.jpeg" alt="Andreas Nyberg, founder of LT.Solutions" class="about-portrait" loading="lazy">
+          </div>
+
+          <p class="about-intro__lede">
+            I'm Andreas Nyberg, an Atlassian consultant and ITSM specialist with more than 15 years of experience in workflow automation, tooling strategy, and service management transformation.
+          </p>
+          <p class="about-intro__text">
+            I've supported global rollouts spanning 4,000 to 5,000 seats across multiple regions, working with organisations where the challenge is never just the tooling but how teams adopt, own, and sustain it. My specialism is the Atlassian service stack: Jira Service Management, Assets (CMDB), and Opsgenie.
+          </p>
+          <p class="about-intro__text">
+            More than configuration, my focus is the human side of transformation: understanding how teams actually work, identifying which processes need to change, and building knowledge that stays long after the engagement ends. I believe in orchestration over automation. Tools don't solve problems; people who know how to orchestrate tools solve problems.
+          </p>
+          <p class="about-intro__text">
+            That philosophy shapes everything I do. If I can leave your team more capable and more confident than when I arrived, the engagement has succeeded. If you still need me afterwards, something went wrong.
+          </p>
+        </div>
+
+        <div class="about-connect">
+          <a href="https://www.linkedin.com/in/andreas-l-a-nyberg/" target="_blank" rel="noopener" class="link-arrow">LinkedIn</a>
+          <a href="mailto:hello@lt.solutions" class="link-arrow">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--light">
     <div class="container cta-panel">
       <span class="section-tag">Next Step</span>
-      <h2 class="section-title">Book a short call to confirm fit</h2>
+      <h2 class="section-title">Let's discuss your challenges</h2>
       <p class="section-subtitle">
-        We will validate your priorities, outline a first sprint, and agree the best path forward.
+        Now you know who you would be working with. Let us talk about what you need.
       </p>
       <div class="hero__cta mt-8">
-        <a href="/contact/" class="btn btn--primary btn--lg">Book a short call</a>
-        <a href="/services/" class="btn btn--secondary btn--lg">Explore services</a>
+        <a href="/contact/" class="btn--hero-primary">Book a short call</a>
+        <a href="/approach/" class="hero-link-secondary">See how we deliver</a>
       </div>
     </div>
   </section>
@@ -246,7 +247,7 @@
         <div>
           <img src="../images/logo-footer.svg" alt="LT.Solutions logo" class="footer__logo" loading="lazy" decoding="async">
           <p class="footer__summary">
-            Atlassian expertise that modernises workflows and builds products that solve real problems in the ecosystem.
+            Atlassian expertise that modernises workflows and builds products that solve real problems.
           </p>
         </div>
 

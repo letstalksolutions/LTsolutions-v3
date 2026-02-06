@@ -32,7 +32,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Preload Critical Resources -->
-  <link rel="preload" href="../images/logo-full.png" as="image" type="image/png">
   <link rel="preload" href="../css/styles.css" as="style">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" as="style">
 
@@ -44,28 +43,7 @@
 
   <!-- Glow Sync Script -->
   <script src="../js/glow-sync.js" defer></script>
-
-  <style>
-    /* Clickable card wrapper */
-    .insight-card--linked {
-      position: relative;
-    }
-    .insight-card--linked .insight-card__link-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-    .insight-card--linked .insight-card__link-overlay:focus-visible {
-      outline: 2px solid var(--color-red);
-      outline-offset: 2px;
-      border-radius: var(--radius-lg);
-    }
-    /* Ensure inner links sit above the overlay */
-    .insight-card--linked .insight-card__read-more {
-      position: relative;
-      z-index: 2;
-    }
-  </style>
+  <script src="../js/main.js" defer></script>
 </head>
 <body class="bg-dark">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -191,13 +169,13 @@
   <section class="section section--light">
     <div class="container cta-panel">
       <span class="section-tag">Next Step</span>
-      <h2 class="section-title">Book a short call to confirm fit</h2>
+      <h2 class="section-title">Want to talk Atlassian strategy?</h2>
       <p class="section-subtitle">
-        We will validate your priorities, outline a first sprint, and agree the best path forward.
+        If anything you have read resonates, let us have a conversation about your environment.
       </p>
       <div class="hero__cta mt-8">
-        <a href="/contact/" class="btn btn--primary btn--lg">Book a short call</a>
-        <a href="/services/" class="btn btn--secondary btn--lg">Explore services</a>
+        <a href="/contact/" class="btn--hero-primary">Book a short call</a>
+        <a href="/about/" class="hero-link-secondary">Learn about us</a>
       </div>
     </div>
   </section>
@@ -209,7 +187,7 @@
         <div>
           <img src="../images/logo-footer.svg" alt="LT.Solutions logo" class="footer__logo" loading="lazy" decoding="async">
           <p class="footer__summary">
-            Hands-on Atlassian expertise that modernises workflows and builds knowledge that stays.
+            Atlassian expertise that modernises workflows and builds products that solve real problems.
           </p>
         </div>
 
@@ -224,17 +202,18 @@
         </div>
 
         <div>
+          <h3 class="footer__heading">Products</h3>
+          <ul class="footer__list">
+            <li><a href="https://schema-forge.com" class="footer__link" target="_blank" rel="noopener">Schema Forge</a></li>
+          </ul>
+        </div>
+
+        <div>
           <h3 class="footer__heading">Connect</h3>
           <ul class="footer__list">
             <li><a href="/contact/" class="footer__link">Contact Us</a></li>
             <li><a href="mailto:hello@lt.solutions" class="footer__link">hello@lt.solutions</a></li>
             <li><a href="https://www.linkedin.com/in/andreas-l-a-nyberg/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer__heading">Legal</h3>
-          <ul class="footer__list">
             <li><a href="/privacy/" class="footer__link">Privacy Policy</a></li>
             <li><a href="/legal/" class="footer__link">Legal Notice</a></li>
           </ul>
@@ -249,47 +228,6 @@
     </div>
   </footer>
 
-  <!-- Scroll Reveal Script -->
-  <script>
-    // Scroll reveal animation
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Header scroll behavior - hide on scroll down, show on scroll up
-    const header = document.querySelector('.header');
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 120) {
-        header.classList.add('header--hidden');
-      } else {
-        header.classList.remove('header--hidden');
-      }
-      lastScrollY = window.scrollY;
-    });
-
-    // Mobile menu toggle
-    const navToggle = document.querySelector('.nav__toggle');
-    const navMenu = document.querySelector('.nav__menu');
-
-    navToggle?.addEventListener('click', () => {
-      const isOpen = navMenu.classList.contains('nav__menu--open');
-      navMenu.classList.toggle('nav__menu--open');
-      navToggle.setAttribute('aria-expanded', !isOpen);
-    });
-  </script>
 
 </body>
 </html>
