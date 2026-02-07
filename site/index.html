@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Atlassian service management consultancy and product innovation. Expert JSM, Assets, and Opsgenie delivery plus Schema-Forge, enterprise CMDB templates for JSM Assets.">
+  <meta name="description" content="Atlassian service management consultancy. Expert JSM, Assets, and Opsgenie delivery for enterprise IT operations teams.">
   <title>Atlassian Expertise & Innovation | LT.Solutions</title>
 
   <!-- Favicon -->
@@ -15,7 +15,7 @@
 
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Atlassian Expertise & Innovation | LT.Solutions">
-  <meta property="og:description" content="Atlassian service management consultancy and product innovation. Expert JSM, Assets, and Opsgenie delivery plus Schema-Forge, enterprise CMDB templates.">
+  <meta property="og:description" content="Atlassian service management consultancy. Expert JSM, Assets, and Opsgenie delivery for enterprise IT operations teams.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lt.solutions/">
   <meta property="og:image" content="https://lt.solutions/images/og/default.jpg">
@@ -24,7 +24,7 @@
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Atlassian Expertise & Innovation | LT.Solutions">
-  <meta name="twitter:description" content="Atlassian service management consultancy and product innovation. Expert JSM, Assets, and Opsgenie delivery plus Schema-Forge, enterprise CMDB templates.">
+  <meta name="twitter:description" content="Atlassian service management consultancy. Expert JSM, Assets, and Opsgenie delivery for enterprise IT operations teams.">
   <meta name="twitter:image" content="https://lt.solutions/images/og/default.jpg">
 
   <!-- Preconnect for Performance -->
@@ -49,139 +49,6 @@
 
   <!-- Homepage-specific styles -->
   <style>
-    /* Schema Forge colour tokens */
-    :root {
-      --color-forge-primary: #ed8936;
-      --color-forge-light: #f6ad55;
-      --color-forge-lighter: #fbd38d;
-      --color-forge-green: #3fb950;
-      --color-forge-dark: #0d1117;
-    }
-
-    /* Slightly brighter background overlay for homepage */
-    body.bg-dark::before {
-      background-image:
-        radial-gradient(circle at 80% 20%, rgba(196, 30, 58, 0.10) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(0, 82, 204, 0.08) 0%, transparent 50%);
-    }
-
-    /* Schema-Forge compact section */
-    .forge-section {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .forge-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(237, 137, 54, 0.08) 0%, transparent 50%),
-        linear-gradient(rgba(237, 137, 54, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(237, 137, 54, 0.02) 1px, transparent 1px);
-      background-size: 100% 100%, 60px 60px, 60px 60px;
-      pointer-events: none;
-    }
-
-    .forge-compact {
-      display: flex;
-      align-items: center;
-      gap: var(--space-6);
-      flex-wrap: wrap;
-    }
-
-    .forge-compact__info {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .forge-header {
-      display: flex;
-      align-items: center;
-      gap: var(--space-4);
-      margin-bottom: var(--space-3);
-    }
-
-    .forge-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 24px rgba(237, 137, 54, 0.25);
-      flex-shrink: 0;
-    }
-
-    .forge-title {
-      font-family: 'JetBrains Mono', var(--font-mono);
-      font-size: var(--text-2xl);
-      font-weight: 600;
-      color: var(--color-white);
-    }
-
-    .forge-description {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: var(--text-base);
-      line-height: var(--leading-relaxed);
-      margin-bottom: var(--space-5);
-    }
-
-    .forge-description span {
-      color: var(--color-forge-light);
-    }
-
-    /* Waitlist form */
-    .waitlist-form {
-      display: flex;
-      gap: var(--space-3);
-      max-width: 460px;
-    }
-
-    .waitlist-form input {
-      flex: 1;
-      padding: var(--space-3) var(--space-4);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-lg);
-      color: var(--color-white);
-      font-family: inherit;
-      font-size: var(--text-base);
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .waitlist-form input:focus {
-      border-color: var(--color-forge-primary);
-      box-shadow: 0 0 0 3px rgba(237, 137, 54, 0.15);
-    }
-
-    .waitlist-form input::placeholder {
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    .waitlist-form button {
-      padding: var(--space-3) var(--space-6);
-      background: linear-gradient(135deg, var(--color-forge-primary), var(--color-forge-light));
-      border: none;
-      border-radius: var(--radius-lg);
-      color: var(--color-forge-dark);
-      font-family: inherit;
-      font-size: var(--text-base);
-      font-weight: var(--weight-semibold);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      white-space: nowrap;
-    }
-
-    .waitlist-form button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(237, 137, 54, 0.3);
-    }
-
     /* Proof / Track Record section */
     .proof-stat {
       display: flex;
@@ -364,23 +231,6 @@
       .insights-carousel__nav {
         display: none;
       }
-
-      .waitlist-form {
-        flex-direction: column;
-      }
-
-      .forge-compact {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .forge-header {
-        justify-content: center;
-      }
-
-      .waitlist-form {
-        margin: 0 auto;
-      }
     }
 
     @media (min-width: 641px) and (max-width: 1024px) {
@@ -410,7 +260,7 @@
     "name": "LT.Solutions",
     "url": "https://lt.solutions",
     "logo": "https://lt.solutions/images/logo-full.png",
-    "description": "Atlassian service management consultancy and product innovation. Expert JSM, Assets, and Opsgenie delivery plus Schema-Forge for JSM Assets.",
+    "description": "Atlassian service management consultancy. Expert JSM, Assets, and Opsgenie delivery for enterprise IT operations teams.",
     "email": "hello@lt.solutions",
     "areaServed": ["GB", "Europe"],
     "sameAs": [
@@ -648,7 +498,7 @@
                 <span class="insights-card__date">5 February 2026</span>
               </div>
               <h3 class="insights-card__title">Behind the Build</h3>
-              <p class="insights-card__excerpt">A look inside the making of Schema Forge, from concept to product, and the lessons learned along the way.</p>
+              <p class="insights-card__excerpt">A look inside building a deployment framework for Jira Service Management, from concept to product, and the lessons learned along the way.</p>
               <span class="insights-card__link">Read more</span>
             </div>
           </a>
@@ -700,25 +550,18 @@
     </div>
   </section>
 
-  <!-- Schema Forge -->
-  <section class="section section--dark forge-section">
+  <!-- JSM Launchpad -->
+  <section class="section section--light">
     <div class="container">
-      <div class="forge-compact reveal">
-        <div class="forge-compact__info">
-          <div class="forge-header">
-            <div class="forge-logo">
-              <img src="images/schema-forge-logo.png" alt="Schema Forge" width="48" height="48" style="border-radius: 12px;">
-            </div>
-            <span class="forge-title">Schema Forge</span>
-          </div>
-          <p class="forge-description">
-            Also building: <span>enterprise CMDB templates for JSM Assets</span>. Pre-built, battle-tested schemas you can deploy in minutes, not months. Join the waitlist for early access.
-          </p>
-          <form class="waitlist-form" action="https://formspree.io/f/xykdgpea" method="POST">
-            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address for waitlist" autocomplete="email">
-            <button type="submit">Join Waitlist</button>
-          </form>
-        </div>
+      <div class="section-header reveal">
+        <span class="section-tag">From Our Practice</span>
+        <h2 class="section-title">JSM Launchpad</h2>
+        <p class="section-subtitle">
+          We are currently developing JSM Launchpad, a deployment framework for Jira Service Management. It packages proven service desk structures, workflows, and asset models into a safe deployable configuration with preview and rollback.
+        </p>
+      </div>
+      <div class="text-center">
+        <a href="https://jsmlaunchpad.com" class="link-arrow" target="_blank" rel="noopener">Learn more at jsmlaunchpad.com</a>
       </div>
     </div>
   </section>
@@ -762,7 +605,7 @@
         <div>
           <h3 class="footer__heading">Products</h3>
           <ul class="footer__list">
-            <li><a href="https://schema-forge.com" class="footer__link" target="_blank" rel="noopener">Schema Forge</a></li>
+            <li><a href="https://jsmlaunchpad.com" class="footer__link" target="_blank" rel="noopener">JSM Launchpad</a></li>
           </ul>
         </div>
 

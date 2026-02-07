@@ -1,7 +1,7 @@
 /**
  * LT.Solutions - Shared page JavaScript
  * Scroll reveal, header scroll behaviour, mobile menu toggle,
- * carousel navigation, waitlist forms, and contact form.
+ * carousel navigation and contact form.
  */
 
 (function () {
@@ -85,55 +85,6 @@
       });
     });
   }
-
-  // ── Waitlist form handling ────────────────────────────────────────
-
-  document.querySelectorAll('.waitlist-form').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var self = this;
-      var emailInput = self.querySelector('input[type="email"]');
-      var email = emailInput.value;
-      var button = self.querySelector('button');
-      var originalText = button.textContent;
-
-      button.textContent = 'Sending...';
-      button.disabled = true;
-
-      fetch(self.action, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({ email: email })
-      })
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error('Submission failed');
-        }
-        button.textContent = "You're in! \u2713";
-        button.style.background = 'var(--color-trust-green)';
-        emailInput.value = '';
-
-        setTimeout(function () {
-          button.textContent = originalText;
-          button.style.background = '';
-          button.disabled = false;
-        }, 3000);
-      })
-      .catch(function () {
-        button.textContent = 'Error - try again';
-        button.style.background = '#ef4444';
-
-        setTimeout(function () {
-          button.textContent = originalText;
-          button.style.background = '';
-          button.disabled = false;
-        }, 2000);
-      });
-    });
-  });
 
   // ── Contact form handling ─────────────────────────────────────────
 
