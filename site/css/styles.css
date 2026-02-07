@@ -2330,13 +2330,30 @@ a.insights-carousel__card:hover {
   margin-bottom: 0;
 }
 
-/* Connect links -- after the bio, not under the photo */
+/* Connect links -- after the bio, clears the floated portrait */
 .about-connect {
   display: flex;
-  gap: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
   margin-top: var(--space-8);
   padding-top: var(--space-6);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  clear: both;
+}
+
+.about-connect .link-arrow {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: var(--weight-medium);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.about-connect .link-arrow:hover {
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Mobile: portrait stacks above text */
@@ -2358,6 +2375,8 @@ a.insights-carousel__card:hover {
 
   .about-connect {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
