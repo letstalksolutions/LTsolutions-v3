@@ -86,19 +86,46 @@
     });
   }
 
-  // ── Contact form — show success message after Formspree redirect ──
+  // ── Contact form handling ─────────────────────────────────────────
 
+  var contactForm = document.getElementById('contact-form');
+  var contactButton = document.getElementById('contact-submit');
   var contactStatus = document.getElementById('contact-status');
 
-  if (contactStatus && window.location.search.indexOf('sent=true') !== -1) {
-    contactStatus.textContent = "Thank you! We'll be in touch shortly.";
-    contactStatus.className = 'mt-4';
-    contactStatus.style.color = 'var(--color-trust-green)';
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    // Clean the URL without reloading
-    if (window.history.replaceState) {
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
+      var originalText = contactButton.textContent;
+      contactButton.textContent = 'Sending...';
+      contactButton.disabled = true;
+      contactStatus.className = 'hidden';
+      contactStatus.textContent = '';
+
+      var data = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Submission failed');
+        contactStatus.textContent = "Thank you! We'll be in touch shortly.";
+        contactStatus.className = 'mt-4';
+        contactStatus.style.color = 'var(--color-trust-green)';
+        contactForm.reset();
+        contactButton.textContent = originalText;
+        contactButton.disabled = false;
+      })
+      .catch(function () {
+        contactStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+        contactStatus.className = 'mt-4';
+        contactStatus.style.color = 'var(--color-error)';
+        contactButton.textContent = originalText;
+        contactButton.disabled = false;
+      });
+    });
   }
 
 })();

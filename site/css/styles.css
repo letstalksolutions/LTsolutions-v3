@@ -763,6 +763,7 @@ a.approach-phase__content .approach-phase__number {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-warm-sm);
+  color: #1A202C;
 }
 
 .value-card__icon {
@@ -1102,50 +1103,36 @@ a.insights-carousel__card:hover {
   --lp-rose: #f472b6;
 }
 
-/* Product badge pill */
+/* Product badge pill — mirrors .section-tag shape in teal */
 .launchpad__badge {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: rgba(45, 212, 191, 0.08);
-  border: 1px solid rgba(45, 212, 191, 0.25);
-  border-radius: 999px;
-  padding: 6px 16px 6px 8px;
+  gap: 8px;
+  background: rgba(45, 212, 191, 0.15);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
   margin-bottom: var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1;
 }
 
 .launchpad__logo {
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   flex-shrink: 0;
-  border-radius: 6px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .launchpad__status {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: var(--weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--lp-teal);
-}
-
-.launchpad__status::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--lp-teal);
-  box-shadow: 0 0 8px rgba(45, 212, 191, 0.5);
-  animation: lp-pulse 2s ease-in-out infinite;
-}
-
-@keyframes lp-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  gap: 6px;
 }
 
 /* Capability card grid */
