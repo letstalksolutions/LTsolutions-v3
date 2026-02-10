@@ -1089,6 +1089,148 @@ a.insights-carousel__card:hover {
 }
 
 /* ============================================
+   JSM LAUNCHPAD PRODUCT SHOWCASE
+   ============================================ */
+
+/* Scoped colour tokens */
+.launchpad {
+  --lp-blue: #3b82f6;
+  --lp-teal: #2dd4bf;
+  --lp-green: #22c55e;
+  --lp-amber: #f59e0b;
+  --lp-violet: #a78bfa;
+  --lp-rose: #f472b6;
+}
+
+/* Product intro */
+.launchpad__intro {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.launchpad__logo {
+  height: 36px;
+  width: auto;
+}
+
+.launchpad__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lp-teal);
+}
+
+.launchpad__status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lp-teal);
+  box-shadow: 0 0 8px rgba(45, 212, 191, 0.5);
+  animation: lp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lp-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Capability card grid */
+.launchpad__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 767px) {
+  .launchpad__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .launchpad__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Capability card */
+.launchpad-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.launchpad-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--lp-accent);
+  transition: box-shadow var(--transition-base);
+}
+
+.launchpad-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+.launchpad-card:hover::before {
+  box-shadow: 0 4px 20px -4px var(--lp-accent);
+}
+
+.launchpad-card__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lp-accent);
+  margin-bottom: var(--space-2);
+}
+
+.launchpad-card__label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lp-accent);
+  box-shadow: 0 0 6px var(--lp-accent);
+  flex-shrink: 0;
+}
+
+.launchpad-card__text {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+  line-height: var(--leading-relaxed);
+}
+
+/* Colour modifiers */
+.launchpad-card--analyse   { --lp-accent: var(--lp-blue); }
+.launchpad-card--structure { --lp-accent: var(--lp-teal); }
+.launchpad-card--connect   { --lp-accent: var(--lp-green); }
+.launchpad-card--route     { --lp-accent: var(--lp-amber); }
+.launchpad-card--observe   { --lp-accent: var(--lp-violet); }
+.launchpad-card--own       { --lp-accent: var(--lp-rose); }
+
+/* ============================================
    6. BUTTON SYSTEM
    ============================================ */
 
@@ -2482,6 +2624,10 @@ a.insights-carousel__card:hover {
   /* Kill stagger delays (used by JS for sequential reveals) */
   [style*="--stagger"] {
     transition-delay: 0s;
+  }
+
+  .launchpad__status::before {
+    animation: none;
   }
 
   /* Preserve: hover transitions for interactive feedback (colour, transform, shadow) */

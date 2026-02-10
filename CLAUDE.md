@@ -8,18 +8,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Domain:** Atlassian consultancy (JSM, Assets/CMDB, Opsgenie, Automation)
 **Website:** https://lt.solutions
 **Brand:** "Confident Minimalism" - enterprise credible + human approachable
-**Upcoming:** Schema Forge product (waitlist on homepage) — may expand site from services-only to services + product
+**Product:** JSM Launchpad — deployment framework for Jira Service Management (separate site at jsmlaunchpad.com)
 
 ## Development
 
 **No build process.** Pure HTML/CSS/JS with no frameworks or preprocessors.
 
 - **Preview:** Open any HTML file directly in a browser
-- **Deploy:** Push to main branch → GitHub Pages auto-deploys from `site/` folder
+- **Deploy:** `npx wrangler pages deploy site --project-name lt-solutions --branch main`
+- **Hosting:** Cloudflare Pages (project `lt-solutions`, custom domain `lt.solutions`)
 
 ## Repository Structure
 
-- `site/` — **PRODUCTION ONLY** - all HTML/CSS/JS/images that deploy to GitHub Pages
+- `site/` — **PRODUCTION ONLY** - all HTML/CSS/JS/images that deploy to Cloudflare Pages
 - `docs/` — Briefs, decisions, reviews, positioning, session handovers
 - `agents/` — Agent init files and chain task definitions
 - `lab/` — Active experiments (promote to `site/` when ready)
@@ -90,11 +91,10 @@ Add `.reveal` class to any element for scroll-triggered fade-in (handled by Inte
 
 ### Forms
 
-Two Formspree-backed forms:
+One Formspree-backed form:
 - **Contact form** (`/contact/`) — ID `xwpkjzqr`
-- **Schema Forge waitlist** (homepage) — ID `xykdgpea`
 
-Both use fetch API submission with client-side success/error states in `main.js`.
+Uses fetch API submission with client-side success/error states in `main.js`.
 
 ### Performance Patterns
 
