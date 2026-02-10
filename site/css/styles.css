@@ -786,10 +786,9 @@ a.approach-phase__content .approach-phase__number {
   color: var(--color-neutral-900);
 }
 
-/* Value card always has a warm-white background, so text is always
-   dark regardless of the parent section colour. No !important needed
-   because the card's own background provides the visual context. */
-.value-card__text {
+/* Value card always has a warm-white background, so text must be dark.
+   Scoped under .value-card to beat .bg-dark p (specificity 0,2,0 > 0,1,1). */
+.value-card .value-card__text {
   color: var(--color-neutral-900);
   line-height: var(--leading-relaxed);
   margin-bottom: 0;
@@ -1043,7 +1042,8 @@ a.approach-phase__content .approach-phase__number {
   color: var(--color-red);
 }
 
-.insight-card__excerpt {
+/* Scoped under .insight-card to beat .bg-dark p (0,2,0 > 0,1,1) */
+.insight-card .insight-card__excerpt {
   color: var(--color-neutral-900);
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-4);
