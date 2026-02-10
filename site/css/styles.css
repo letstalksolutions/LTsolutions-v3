@@ -1104,15 +1104,16 @@ a.insights-carousel__card:hover {
 
 /* Product intro */
 .launchpad__intro {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
   margin-bottom: var(--space-3);
 }
 
 .launchpad__logo {
   height: 36px;
-  width: auto;
+  width: 36px;
+  flex-shrink: 0;
 }
 
 .launchpad__status {
@@ -1163,8 +1164,8 @@ a.insights-carousel__card:hover {
 
 /* Capability card */
 .launchpad-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
   padding: var(--space-5) var(--space-5) var(--space-4);
   position: relative;
@@ -1180,16 +1181,17 @@ a.insights-carousel__card:hover {
   right: 0;
   height: 3px;
   background: var(--lp-accent);
-  transition: box-shadow var(--transition-base);
+  transition: box-shadow var(--transition-base), height var(--transition-base);
 }
 
 .launchpad-card:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
   transform: translateY(-2px);
 }
 
 .launchpad-card:hover::before {
+  height: 4px;
   box-shadow: 0 4px 20px -4px var(--lp-accent);
 }
 
