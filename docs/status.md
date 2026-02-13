@@ -1,6 +1,6 @@
 # LT.solutions rebuild status
 
-Updated: 2026-02-04
+Updated: 2026-02-13
 
 ## Current Phase: PRE-LAUNCH QA
 
@@ -23,18 +23,27 @@ Updated: 2026-02-04
 
 ---
 
-## Session Progress (2026-02-04)
+## Session Progress (2026-02-13)
 
 ### Completed This Session
+- ✅ **CLAUDE.md improvements** — Added explicit list of all 13 HTML page paths, documented page-specific inline styles caveat, added colour contrast pitfall section, corrected CSS line count
+- ✅ **Agent init updated** — Rewrote `agents/init-claude-code.md` to reference CLAUDE.md as single source of truth, added deployment info (Cloudflare manual, GitHub Pages auto), added key pitfalls
+- ✅ **Deployment audit** — Confirmed Cloudflare Pages is NOT auto-synced (manual wrangler deploy required), GitHub Pages auto-deploys via Actions on push to main. No pending site/ changes to deploy.
+
+### In Progress
+- ⏸️ **Hero CTAs** - First implementation rejected ("not nice"). New concepts proposed, awaiting decision.
+
+---
+
+## Session Progress (2026-02-04)
+
+### Completed
 - ✅ **Service Pillar CTAs** - Replaced gradient pill buttons with text links + arrow
 - ✅ **Approach Section** - Replaced glass card grid with timeline component (dots, connecting line, "01/02/03/04" numbering)
 - ✅ **Section Footer CTAs** - Changed to text links with arrows (Services, Approach sections)
 - ✅ **Homepage Glow Fixed** - Changed from wide circle to narrow ellipse (40% 30%) so rotating rectangle is visible
 - ✅ **Approach Text Bug** - Fixed white-on-white text (link styling was overriding colors)
 - ✅ **Link Arrow Utility** - Created `.link-arrow` class for text link CTAs
-
-### In Progress
-- ⏸️ **Hero CTAs** - First implementation rejected ("not nice"). New concepts proposed, awaiting decision.
 
 ### New Files Created
 - `docs/reviews/design-review-index-ctas.md` - CTA design recommendations
@@ -80,13 +89,13 @@ Three concepts proposed in `docs/reviews/design-review-hero-redesign.md`:
 ### Infrastructure
 - Git repository initialized
 - Folder structure established (site/, docs/, agents/, lab/, archive/)
-- Design system complete (2000+ lines CSS)
+- Design system complete (~2600 lines CSS)
 - All agent init files updated with current context
 
 ### Content & Pages
 - Positioning spine locked (docs/positioning/primary-offer.md)
 - Homepage brief and copy blocks
-- All 12 pages built
+- All 13 pages built (including 404)
 - Sitemap.xml, robots.txt, CNAME
 
 ### Design & Assets
@@ -115,7 +124,7 @@ Watch for updates in next sessions.
 ```
 site/
 ├── index.html              # Homepage
-├── css/styles.css          # Design system (2000+ lines)
+├── css/styles.css          # Design system (~2600 lines)
 ├── js/glow-sync.js         # Glow animation sync
 ├── images/                 # All assets
 ├── services/index.html     # Services overview

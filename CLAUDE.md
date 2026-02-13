@@ -28,7 +28,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Key Files
 
-- `site/css/styles.css` — Design system (~2500 lines): tokens, components, utilities
+- `site/css/styles.css` — Design system (~2600 lines): tokens, components, utilities
 - `site/js/main.js` — Scroll reveals, mobile menu, carousel, form submissions
 - `site/js/glow-sync.js` — Synchronises animated glow rotation across pages
 - `docs/status.md` — **Read first**: current project state and priorities
@@ -39,6 +39,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### No Templating — Header/Footer Duplicated
 
 Navigation and footer HTML are **copy-pasted across all 13 HTML files**. When updating nav links, the footer, or shared `<head>` elements, you must edit every page. Active nav state is set per-page with `.nav__link--active` and `aria-current="page"`.
+
+**All 13 pages** (update all when changing shared elements):
+`site/index.html`, `site/404.html`, `site/services/index.html`, `site/approach/index.html`, `site/about/index.html`, `site/contact/index.html`, `site/insights/index.html`, `site/insights/the-relay/index.html`, `site/insights/behind-the-build/index.html`, `site/insights/a-new-beginning/index.html`, `site/insights/unexpected-friendship/index.html`, `site/privacy/index.html`, `site/legal/index.html`
 
 ### Design Tokens (in styles.css `:root`)
 
@@ -96,9 +99,17 @@ One Formspree-backed form:
 
 Uses fetch API submission with client-side success/error states in `main.js`.
 
+### Page-Specific Inline Styles
+
+Some pages embed `<style>` blocks in `<head>` for page-specific components (e.g. homepage has carousel and proof-stat styles). Check for these inline styles when modifying page-specific components — they won't be in `styles.css`.
+
+### Colour Contrast Pitfall
+
+White-on-white text has been a recurring bug. When adding cards or text in `.section--light` (white/mist background), explicitly set text colour to `var(--color-neutral-900)`. Don't rely on inheritance from parent dark sections — light sections need dark text overrides.
+
 ### Performance Patterns
 
-Pages use `<link rel="preconnect">` for Google Fonts, `<link rel="preload">` for critical CSS, `loading="lazy"` on images, and `fetchpriority="high"` on hero images. All JS is loaded with `defer`.
+Pages use `<link rel="preconnect">` for Google Fonts, `<link rel="preload">` for critical CSS, `loading="lazy"` on images, and `fetchpriority="high"` on hero images. All JS is loaded with `defer`. All pages use `lang="en-GB"` on the `<html>` element.
 
 ## Working Rules
 
